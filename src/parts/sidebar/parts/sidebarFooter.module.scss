@@ -1,0 +1,7 @@
+@import 'css/custom/_required.scss';
+
+.footer {
+  border-top: $border-width solid $border-color;
+  margin: $sidebar-padding-y (-$sidebar-padding-x) 0;
+  padding: $sidebar-padding-y $sidebar-padding-x 0;
+}

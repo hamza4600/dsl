@@ -1,0 +1,15 @@
+@import 'css/custom/_required.scss';
+
+.warning {
+  align-items: center;
+  display: flex;
+  min-height: $input-height;
+
+  &.sm {
+    min-height: $input-height-sm;
+  }
+}
+
+.sprite {
+  margin-right: .8rem;
+}

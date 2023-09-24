@@ -1,0 +1,7 @@
+@import 'css/custom/_required.scss';
+
+.link{
+    @include mobile {
+    margin-left: auto;
+}
+}

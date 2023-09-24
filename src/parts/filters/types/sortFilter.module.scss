@@ -1,0 +1,16 @@
+@import 'css/custom/_required.scss';
+
+.select {
+  :global(.form-control),
+  :global(.input-group-text) {
+    background-color: $white !important;
+  }
+}
+
+.button {
+  background-color: $white !important;
+
+  @include hover {
+    border-color: $input-focus-border-color !important;
+  }
+}

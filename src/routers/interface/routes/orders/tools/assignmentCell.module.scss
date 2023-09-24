@@ -1,0 +1,52 @@
+@import 'css/custom/_required.scss';
+
+.badge {
+  :global(.table-badge) {
+    min-width: 2.8rem;
+    max-width: 2.8rem;
+    margin: 0;
+  }
+}
+
+.value {
+  @include desktop {
+    flex-grow: 1;
+  }
+
+  @include mobile {
+    margin-right: 0.5rem;
+  }
+}
+
+.top{
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+.time {
+  position: relative;
+  @include mobile {
+    flex-grow: 1;
+    color: $gray-600;
+
+    &::before {
+      @include desktop{
+        content: '(';
+      }
+    }
+
+    &::after {
+      @include desktop{
+      content: ')';
+      }
+    }
+  }
+}
+
+.time{
+  @include mobile{
+    text-align: end !important;
+  }
+  @include desktop{
+    text-align: center;
+  }
+}

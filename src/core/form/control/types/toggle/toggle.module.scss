@@ -1,0 +1,7 @@
+@import 'css/custom/_required.scss';
+
+.outer {
+  &:not(.inline):not(.fullWidth) {
+    max-width: $input-max-width;
+  }
+}

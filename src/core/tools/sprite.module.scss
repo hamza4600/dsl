@@ -1,0 +1,58 @@
+@use 'sass:math';
+@import 'css/custom/_required.scss';
+
+// Sizes
+.xl {
+  min-height: $sprite-size-lg !important;
+  min-width: $sprite-size-lg !important;
+}
+.lg {
+  min-height: $sprite-size-lg !important;
+  min-width: $sprite-size-lg !important;
+}
+
+.md {
+  min-height: $sprite-size-md !important;
+  min-width: $sprite-size-md !important;
+
+  use {
+    transform: scale(math.div($sprite-size-md, $sprite-size-lg));
+  }
+}
+
+.sm {
+  min-height: $sprite-size-sm !important;
+  min-width: $sprite-size-sm !important;
+
+  use {
+    transform: scale(math.div($sprite-size-sm, $sprite-size-lg));
+  }
+}
+
+.xs {
+  min-height: $sprite-size-xs !important;
+  min-width: $sprite-size-xs !important;
+
+  use {
+    transform: scale(math.div($sprite-size-xs, $sprite-size-lg));
+  }
+}
+
+:export {
+  size-lg: strip-unit($sprite-size-lg);
+  size-md: strip-unit($sprite-size-md);
+  size-sm: strip-unit($sprite-size-sm);
+}
+
+
+// Animations
+
+@keyframes spin {
+ to {
+   transform: rotate(360deg);
+ }
+}
+
+.spin {
+  animation: spin .75s steps(8, end) infinite;
+}

@@ -1,0 +1,19 @@
+@import 'css/custom/_required.scss';
+
+.container {
+  margin: 0 $header-padding;
+  min-width: 36rem;
+  
+  @include hover {
+    background-color: transparentize($dark, .8) !important;
+    box-shadow: none !important;
+  }
+}
+
+.keyword {
+  width: 60%;
+}
+
+.category {
+  width: 40%;
+}

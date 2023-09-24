@@ -1,0 +1,42 @@
+@import 'css/custom/_required.scss';
+
+.wrapper {
+  display: inline-block;
+}
+
+.tooltip {
+  z-index: 9999;
+  :global(.tooltip-inner) {
+    box-shadow: $box-shadow;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .#{$color} {
+    :global(.tooltip-inner) {
+      background-color: $value;
+      color: $white;
+    }
+
+    &:global(.bs-tooltip-bottom) {
+      :global(.arrow):before {
+        border-bottom-color: $value;
+      }
+    }
+    &:global(.bs-tooltip-left) {
+      :global(.arrow):before {
+        border-right-color: $value;
+      }
+    }
+    &:global(.bs-tooltip-right) {
+      :global(.arrow):before {
+        border-left-color: $value;
+      }
+    }
+    &:global(.bs-tooltip-top) {
+      :global(.arrow):before {
+        border-top-color: $value;
+      }
+    }
+  }
+}

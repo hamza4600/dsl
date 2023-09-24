@@ -1,0 +1,25 @@
+@import 'css/custom/_required.scss';
+
+.items {
+  &:not(.vertical):not(.columns):not(.fullWidth) {
+    @include media-breakpoint-up(md) {
+      max-width: $input-max-width + $form-grid-gutter-width;
+    }
+  }
+  }
+
+.itemControls {
+  flex-wrap: nowrap;
+
+  & > * {
+    flex-grow: 1 !important;
+    flex-shrink: 1 !important;
+  }
+}
+
+.deleteButton {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  max-width: px-to-rem($sprite-size-md) + $form-grid-gutter-width;
+}

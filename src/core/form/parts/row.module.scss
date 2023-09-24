@@ -1,0 +1,10 @@
+@use 'sass:math';
+@import 'css/custom/_required.scss';
+
+.row {
+  margin: math.div(-$form-group-margin-bottom, 2) math.div(-$form-grid-gutter-width, 2);
+
+  @include mobile {
+    margin: math.div(-$form-group-margin-bottom, 2) math.div(-$form-grid-gutter-width-mobile, 2);
+  }
+}

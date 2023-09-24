@@ -1,0 +1,78 @@
+@use 'sass:math';
+@import 'css/custom/_required.scss';
+
+$arrow-margin-y: math.div($dropdown-caret-size, 2) - $border-width;
+$arrow-margin-x: $input-btn-padding-x + $input-btn-border-width + math.div(($input-btn-font-size * $input-btn-line-height - $dropdown-caret-size), 2);
+$arrow-margin-x-sm: $input-btn-padding-x-sm + $input-btn-border-width + math.div(($input-btn-font-size-sm * $input-btn-line-height-sm - $dropdown-caret-size), 2);
+
+.menu {
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+
+  :global(.scrollbar) {
+    background-color: $dropdown-bg;
+    border-color: $dropdown-bg;
+  }
+
+  &.withArrow {
+    border-radius: 0;
+
+    @include before {
+      background-color: $dropdown-bg;
+      border: $border-width solid $dropdown-border-color;
+      height: $dropdown-caret-size;
+      width: $dropdown-caret-size;
+      transform: rotate(45deg);
+    }
+
+    [data-popper-placement="bottom-end"] > &,
+    [data-popper-placement="bottom-start"] > & {
+      margin-top: math.div($form-group-margin-bottom, 2);
+
+      &:before {
+        top: -$arrow-margin-y;
+      }
+    }
+
+    [data-popper-placement="top-end"] > &,
+    [data-popper-placement="top-start"] > & {
+      margin-bottom: math.div($form-group-margin-bottom, 2);
+
+      &:before {
+        bottom: -$arrow-margin-y;
+      }
+    }
+
+    [data-popper-placement="bottom-end"] > &,
+    [data-popper-placement="top-end"] > & {
+      &:before {
+        right: $arrow-margin-x;
+      }
+
+      &.sm {
+        &:before {
+          right: $arrow-margin-x-sm;
+        }
+      }
+    }
+
+    [data-popper-placement="bottom-start"] > &,
+    [data-popper-placement="top-start"] > & {
+      &:before {
+        left: $arrow-margin-x;
+      }
+
+      &.sm {
+        &:before {
+          left: $arrow-margin-x-sm;
+        }
+      }
+    }
+  }
+}
+
+.inner {
+  background: $dropdown-bg;
+  position: relative;
+  width: 100%;
+}

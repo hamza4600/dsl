@@ -1,0 +1,63 @@
+@use 'sass:math';
+@import 'css/custom/_required.scss';
+
+.select {
+  :global(.form-control) {
+    border-width: 0 !important;
+    flex: inherit;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bolder;
+    padding: 0;
+    width: auto;
+  }
+
+  :global(.dropdown-container):before {
+    right: $input-btn-padding-x + math.div((px-to-rem($sprite-size-lg) - $dropdown-caret-size),2);
+  }
+}
+
+.formGroup {
+  flex: auto;
+  flex-grow: 0;
+  // padding: 0 $header-padding;
+  width: auto;
+  // margin-left: 1.5rem;
+
+  & > :global(.row) > :global(.col) {
+    flex-grow: 0;
+  }
+}
+
+.label {
+  font-size: $font-size-xl;
+  letter-spacing: inherit;
+  padding-right: 0 !important;
+  padding-left: 14px !important;
+  text-transform: capitalize;
+  @include mobile{
+   padding-top: 16px !important;
+   padding-right: 16px !important;
+  }
+
+@include desktop{
+  &:after {
+    content: ":";
+  }
+}
+}
+
+.inputGroup {
+  flex-grow: 0;
+}
+
+.caret {
+  border-width: 0 !important;
+  padding-bottom: 0;
+  padding-top: 0;
+  @include desktop{ 
+  :global(.input-group) :global(.input-group-append) &:global(.input-group-text) svg {
+  color: $dark-input-color !important;
+    margin: 0;
+  }
+}
+}

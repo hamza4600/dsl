@@ -1,0 +1,38 @@
+@import 'css/custom/_required.scss';
+
+.image {
+  display: block;
+}
+
+.fill {
+  fill: currentColor;
+}
+
+.stroke {
+  fill: transparent;
+  stroke: currentColor;
+}
+
+@each $color, $value in $colors {
+  .#{$color} {
+    &.fill,
+    &.stroke {
+      color: $value;
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .#{$color} {
+    &.fill,
+    &.stroke {
+      color: $value;
+    }
+  }
+}
+
+:export {
+  logo-height:    strip-unit($logo-height);
+  logo-width:     strip-unit($logo-width);
+  logo-small:     strip-unit($logo-small);
+}

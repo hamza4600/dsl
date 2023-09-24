@@ -1,0 +1,61 @@
+@import 'css/custom/_required.scss';
+
+.control {
+  background-color: $input-bg;
+  background-image: none !important;
+
+  &:not(:first-child) {
+    border-left-width: 0;
+    padding-left: 0;
+  }
+
+  &:not(:last-child) {
+    border-right-width: 0;
+    padding-right: 0;
+  }
+
+  :global(.form-control-empty) > & {
+    @extend %input-empty;
+  }
+
+  :global(.form-control-focus) > & {
+    @extend %input-focus;
+  }
+
+  :global(.form-control-disabled) > & {
+    @extend %input-disabled;
+  }
+
+  :global(.form-control-read-only) > & {
+    @extend %input-read-only;
+  }
+
+  :global(.form-control-error) > & {
+    @extend %input-error;
+  }
+
+  &:global(.form-control-plaintext) {
+    @extend %input-plaintext;
+    border: 0;
+    padding: 0 0.1rem !important; // Fix bug with plaintext not showing in Chrome in mobile view
+    margin-left: -0.1rem;
+  }
+
+  &.small {
+    @extend %input-small;
+  }
+}
+
+.text {
+  align-items: center;
+  display: flex;
+  height: $btn-height;
+
+  &.small {
+    height: $btn-height-sm;
+  }
+
+  &.placeholder {
+    color: $input-placeholder-color !important;
+  }
+}

@@ -1,0 +1,72 @@
+@import 'css/custom/_required.scss';
+@import './scrollbars.module.scss';
+
+.scrollbar {
+  background: $scrollbar-bg;
+  padding: $scrollbar-padding;
+  position: absolute;
+
+  &.vertical {
+    border-left: $border-color solid $border-width;
+    height: 100%;
+    right: 0;
+    width: $total-width;
+
+    &.multi {
+      height: calc(100% - #{$total-width});
+    }
+  }
+
+  &.horizontal {
+    border-top: $border-color solid $border-width;
+    bottom: 0;
+    height: $total-width;
+    width: 100%;
+
+    &.multi {
+      width: calc(100% - #{$total-width});
+    }
+  }
+}
+
+.tray {
+  background: mix($scrollbar-bg, $scrollbar-color, 75%);
+  border-radius: $scrollbar-border-radius;
+
+  .vertical & {
+    height: 100%;
+    width: $scrollbar-width;
+  }
+
+  .horizontal & {
+    height: $scrollbar-width;
+    width: 100%;
+  }
+}
+
+.handle {
+  background: $scrollbar-color;
+  border-radius: $scrollbar-border-radius;
+  position: relative;
+
+  &.disabled {
+    opacity: .5;
+  }
+
+  &:not(.disabled) {
+    cursor: pointer;
+  }
+
+  &:hover,
+  &.dragging {
+    background: $scrollbar-hover;
+  }
+
+  .vertical & {
+    width: $scrollbar-width;
+  }
+
+  .horizontal & {
+    height: $scrollbar-width;
+  }
+}

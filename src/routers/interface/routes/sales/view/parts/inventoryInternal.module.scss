@@ -1,0 +1,16 @@
+@import 'css/custom/_required.scss';
+
+.info {
+  cursor: pointer;
+  color: $primary;
+  margin-right: .5rem
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.field{
+  color: $gray-800
+}

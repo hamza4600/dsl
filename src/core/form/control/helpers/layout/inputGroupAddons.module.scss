@@ -1,0 +1,104 @@
+@use 'sass:math';
+@import 'css/custom/_required.scss';
+
+
+// Input Group Addons
+
+.append,
+.prepend {
+  background-color: transparent !important; // HYBRID FIX
+  border-width: 0 !important; // HYBRID FIX
+  padding: 0 !important; // HYBRID FIX
+}
+
+.append {
+  margin-left: 0;
+
+  .text {
+    border-left-width: 0 !important;
+
+    &:empty {
+      padding-left: 0;
+    }
+
+    :global(.form-control-plaintext) > & {
+      padding-bottom: 0;
+      padding-right: 0;
+      padding-top: 0;
+    }
+  }
+}
+
+.prepend {
+  margin-right: 0;
+
+  .text {
+    border-right-width: 0 !important;
+
+    &:empty {
+      padding-right: 0;
+    }
+
+    :global(.form-control-plaintext) > & {
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-top: 0;
+    }
+  }
+}
+
+
+// Input Group Text
+
+.text {
+  background-color: $input-bg !important; // HYBRID FIX
+  transition: $input-transition;
+
+  :global(.form-control-focus) > .addon > & {
+    @extend %input-focus;
+  }
+
+  :global(.form-control-disabled) > .addon > & {
+    @extend %input-disabled;
+//    color: $input-disabled-color;
+  }
+
+  :global(.form-control-error) > .addon > & {
+    @extend %input-error;
+  }
+
+  :global(.form-control-plaintext) > .addon > & {
+    @extend %input-plaintext;
+  }
+
+  :global(.form-control-read-only) > .addon > & {
+    @extend %input-read-only;
+  }
+
+  :global(.form-control-empty) .addon & {
+    @extend %input-empty;
+  }
+
+  svg {
+    color: $input-icon-color;
+    margin: math.div(($input-btn-font-size * $input-btn-line-height - px-to-rem($sprite-size-sm)), 2);
+    transition: $transition-base;
+
+    :global(.select-group.show) &,
+    :global(.form-control-focus) .addon & {
+      color: $primary;
+    }
+  }
+
+  &.small {
+    @extend %input-small;
+  }
+}
+
+.label {
+  color: $secondary;
+}
+
+.pointer {
+  cursor: pointer;
+}

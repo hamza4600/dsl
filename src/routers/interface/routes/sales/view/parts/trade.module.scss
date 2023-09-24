@@ -1,0 +1,17 @@
+@import 'css/custom/_required.scss';
+
+.bolde {
+    font-weight: bold;
+}
+.body{
+    hr {
+        max-width: 40%;
+        margin-left: 0rem;
+    }  
+    button{
+        position: relative !important;
+        left: 0rem !important;
+        padding: 10px !important;
+        color:  #0066d6 !important;
+    }
+} 

@@ -1,0 +1,19 @@
+@import 'css/custom/_required.scss';
+
+.anchor {
+  margin-top: -$header-height;
+}
+
+.card :global {
+  .card-header {
+    border-bottom-color: $green;
+  }
+}
+
+.badge {
+  min-width: 3.4rem;
+  padding: 1rem;
+  background-color: lighten($green, 55%);
+  color: $green;
+  font-size: $font-size-lg;
+}

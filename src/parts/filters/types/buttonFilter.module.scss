@@ -1,0 +1,16 @@
+@import 'css/custom/_required.scss';
+
+.toggle {
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.badge {
+  background-color: $gray-200;
+  margin-left: .8rem;
+
+  :global(.btn-primary) & {
+    background-color: transparentize($white, .5);
+  }
+}

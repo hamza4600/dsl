@@ -1,0 +1,11 @@
+@import 'css/custom/_required.scss';
+
+.select {
+  :global(.dropdown-popover) {
+    min-width: auto !important;
+  }
+}
+
+.picker {
+  padding: 10px 20px;
+}

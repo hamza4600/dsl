@@ -1,0 +1,7 @@
+@use 'sass:math';
+@import 'css/custom/_required.scss';
+
+.text {
+  color: $secondary;
+  padding-top: math.div($form-grid-gutter-width, 2);
+}

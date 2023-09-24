@@ -1,0 +1,40 @@
+@import 'css/custom/_required.scss';
+
+.dealerSetting {
+
+  .checklistLabel {
+    align-items: flex-start;
+    padding-top: 0.8rem;
+  }
+
+  .makes {
+    :global(.checklist-row) {
+      max-width: 100%;
+    }
+
+    :global(.checklist-col) {
+      flex: 0 0 100%;
+      overflow: hidden;
+  
+      :global(.form-check-label) {
+        white-space: pre-wrap;
+      }
+
+      @include media-breakpoint-up(sm) {
+        flex: 0 0 calc(100% / 3);
+      }
+
+      @include media-breakpoint-up(md) {
+        flex: 0 0 20%;
+      }
+
+      @include media-breakpoint-up(lg) {
+        flex: 0 0 25%;
+      }
+
+      @include media-breakpoint-up(xl) {
+        flex: 0 0 20%;
+      }
+    }
+  }
+}

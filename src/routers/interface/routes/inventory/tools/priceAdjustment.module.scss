@@ -1,0 +1,73 @@
+@import 'css/custom/_required.scss';
+
+.checklist{
+    font-size:2.4rem !important;
+    font-weight:8px bold !important;
+}
+.inputGroup{
+    border:1px solid $nav-link-sprite;
+    border-radius: 4px ;
+    padding: 1.5px;
+    }
+.inputText{
+    color: #6B7492;
+    border: none ;
+    height: 27px ;
+    background-color: rgba(201, 203, 212, 0.1);
+}
+.mainInput{
+    color: #6B7492;
+    border: none;
+    background-color: rgba(201, 203, 212, 0.1);
+    padding: 0px;
+    margin: 0;
+    height: 25px
+}
+
+.radioCustom {
+    opacity: 0;
+    position: absolute;   
+}
+
+  .radioCustom{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 4px;
+    cursor: pointer;
+    width:22px;
+    border-radius:55px;
+    padding: 2px;
+}
+
+.checkboxCustom:before,.radioCustomLabel:before {
+    color: #DADADA;
+    font-weight:bolder;
+    background: #fff;
+    border: 1px solid #ddd;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 1px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.radioCustom:checked + :before {
+    font-family: 'FontAwesome';
+    width: 22px;
+    height: 22px;
+    color: #fff;
+    background-color: #2D5499;
+    // margin-bottom: 1px;
+}
+.radio_1:before {
+    content: "-";
+    padding: 1px;
+}
+.radio_2:before {
+    content: "+";
+    padding: 1px;
+    margin-right: 3px;
+
+}
+

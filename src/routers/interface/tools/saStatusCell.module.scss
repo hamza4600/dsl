@@ -1,0 +1,12 @@
+@import 'css/custom/_required.scss';
+
+.value {
+  margin-top: 0.6rem;
+
+  @include mobile {
+    margin: 0.8rem 0;
+  }
+}
+.cursor:hover {
+  cursor:pointer;
+}

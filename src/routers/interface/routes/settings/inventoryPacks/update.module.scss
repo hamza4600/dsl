@@ -1,0 +1,10 @@
+@import 'css/custom/_required.scss';
+
+.type {
+  text-transform: capitalize;
+}
+
+.multipleChoiceLabel {
+  align-items: flex-start;
+  padding-top: .8rem;
+}

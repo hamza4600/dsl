@@ -1,0 +1,37 @@
+@import 'css/custom/_required.scss';
+
+.item {
+  display: flex;
+  align-items: center;
+  font-size: $input-font-size;
+  line-height: $input-line-height;
+  padding: $input-padding-y 0;
+  width: 100%;
+  word-break: break-all;
+
+  &:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.label {
+  font-weight: $font-weight-bolder;
+
+  &:not(:last-child) {
+    margin-right: .8rem;
+  }
+
+  .error & {
+    color: $danger;
+  }
+
+  &.inactive {
+    background-color: transparent !important;
+    color: $gray-800 !important;
+    cursor: default !important;
+  }
+}
+
+.loader {
+  margin-left: auto;
+}

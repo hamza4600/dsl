@@ -1,0 +1,56 @@
+@import 'css/custom/_required.scss';
+
+.dialog {
+  margin: 0;
+  width: $modal-md;
+
+  @include media-breakpoint-up(lg) {
+    max-width: $modal-lg;
+    width: $modal-lg;
+  }
+
+  :global(.modal-content) {
+    box-shadow: $box-shadow;
+  }
+}
+
+.header {
+  flex-direction: column;
+  margin: 0 0 -3.4rem;
+  padding: 5rem 7.5rem 0;
+}
+
+.graphic {
+  margin: 0 auto 2.4rem;
+}
+
+.title {
+  font-weight: $font-weight-bolder;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.body {
+  margin: 0 auto;
+  padding: 5rem 7.5rem;
+  text-align: center;
+}
+
+.footer {
+  display: block;
+  margin: -1.8rem 0 0;
+  padding: 0 7.5rem 3.2rem;
+  width: 100%;
+
+  & > * {
+    margin: 0;
+  }
+}
+
+.buttons {
+  justify-content: space-around;
+}
+
+.close {
+  position: absolute;
+}

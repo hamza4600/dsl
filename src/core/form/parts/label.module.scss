@@ -1,0 +1,100 @@
+@use 'sass:math';
+@import 'css/custom/_required.scss';
+
+@mixin labelAbove {
+  padding-bottom: 0;
+
+  .label {
+    @include caption;
+  }
+}
+
+@mixin labelBefore {
+  max-width: $label-width;
+
+  &.inline {
+    padding-right: 0;
+  }
+
+  .label {
+    display: flex;
+    min-height: $input-height;
+
+    &:not(.inline) {
+      align-items: flex-start;
+    }
+
+    &:not(.plaintext):not(.inline) {
+      padding-top: $input-btn-padding-y + $border-width;
+    }
+
+    &.sm {
+      min-height: $input-height-sm;
+
+      &:not(.plaintext):not(.inline) {
+        padding-top: $input-btn-padding-y-sm  + $border-width;
+      }
+    }
+  }
+}
+
+.col {
+  &.before {
+    &.plaintext {
+      @include labelBefore;
+    }
+
+    &:not(.plaintext) {
+      @include media-breakpoint-down(sm) {
+        @include labelAbove;
+      }
+    
+      @include media-breakpoint-up(md) {
+        @include labelBefore;
+      }
+    }
+  }
+
+  &.above {
+    @include labelAbove;
+  }
+
+  &.columns {
+    @include media-breakpoint-down(lg) {
+      @include labelAbove;
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include labelBefore;
+    }
+  }
+}
+
+.label {
+  color: $custom-control-label-color;
+  font-size: $input-font-size;
+  font-weight: $custom-control-label-weight;
+
+  &.plaintext{
+    min-height: inherit !important;
+  }
+
+  &.inline {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+  }
+
+  &.disabled {
+    color: $custom-control-label-disabled-color !important;
+  }
+
+  &.required:not(.plaintext):not(.disabled) {
+    span {
+      &:after {
+        content: $label-required-indicator;
+      }
+    }
+  }
+}

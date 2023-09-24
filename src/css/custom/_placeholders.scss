@@ -1,0 +1,43 @@
+%input-empty {
+  background-color: $input-empty-bg !important;
+}
+
+%input-hover {
+  border-color: $input-focus-border-color;
+}
+
+%input-focus {
+  background-color: $input-focus-bg !important;
+  border-color: $input-focus-border-color;
+  color: $input-focus-color;
+}
+
+%input-disabled {
+  background-color: $input-disabled-bg !important;
+  border-color: $input-disabled-border-color;
+  color: $input-disabled-color;
+}
+
+%input-plaintext {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: $gray-800;
+}
+
+%input-read-only {
+  background-color: $input-disabled-bg !important;
+  border-color: $input-disabled-bg;
+}
+
+%input-error {
+  border-color: $danger;
+}
+
+%input-small {
+  height: auto !important;
+}
+
+%small {
+  font-size: $font-size-sm;
+  line-height: $line-height-sm;
+}

@@ -1,0 +1,17 @@
+@import 'css/custom/_required.scss';
+
+.number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.8rem;
+  min-width: 2.8rem;
+  max-width: 2.8rem;
+  background-color: mix($white, $yellow, 80%);
+  border: $border-width solid $yellow;
+  border-radius: $border-radius;
+  color: $yellow;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bolder;
+  line-height: $table-row-height;
+}

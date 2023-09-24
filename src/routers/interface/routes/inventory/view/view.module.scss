@@ -1,0 +1,28 @@
+@import 'css/custom/_required.scss';
+
+.field {
+  display:grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  margin-bottom: 8px;
+
+  &:last-child {
+    margin-bottom: none;
+  }
+
+  .text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $gray-600;
+
+    &--description {
+      color: $gray-800
+    }
+  }
+
+  div {
+    &:last-child {
+      grid-column: span 3 / span 3;
+    }
+  }
+}

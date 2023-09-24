@@ -1,0 +1,160 @@
+@use 'sass:math';
+@import 'css/custom/_required.scss';
+
+.calendar {
+  width: $btn-height-sm * 7;
+
+  &:not(.mode) {
+    display: none;
+  }
+}
+
+.header {
+  margin-top: 8px;
+}
+
+.body {
+  margin-top: 8px;
+}
+
+.row {
+  margin: 0 !important;
+}
+
+.col {
+  padding: 0 !important;
+  text-align: center;
+}
+
+.toggles {
+  display: flex;
+  justify-content: space-between;
+}
+
+.toggle {
+  background: transparent !important;
+  border-width: 0 !important;
+  color: $secondary;
+  line-height: inherit;
+  min-height: auto;
+  min-width: auto;
+  padding: 0 !important;
+  width: auto !important;
+
+  &:not(:disabled):hover {
+    color: $primary !important;
+  }
+
+  &:disabled {
+    cursor: default !important;
+    opacity: 0 !important;
+  }
+}
+
+.title {
+  background: transparent !important;
+  border-width: 0 !important;
+  color: $body-color !important;
+//  cursor: pointer;
+  font-weight: $font-weight-bolder !important;
+  padding: 0 !important;
+  text-decoration: none !important;
+
+  :global(.btn-label) {
+    justify-content: center;
+  }
+
+  @include hover {
+//    color: $primary !important;
+  }
+}
+
+.caption {
+  @include caption;
+  color: $text-muted;
+  font-size: 1rem;
+}
+
+.day {
+  flex-grow: 0;
+  flex-shrink: 0;
+  max-width: calc(100%/7);
+  min-width: calc(100%/7);
+  width: calc(100%/7);
+}
+
+.btn-container {
+  transition: $transition-base;
+}
+
+.btn {
+  background: transparent !important; // FIX
+  border-radius: math.div($border-radius, 2) !important;
+  border-width: 0 !important;
+  color: $secondary !important; // FIX
+  margin: 0 !important; // HYBRID FIX
+  padding: 0 !important;
+  width: 100% !important;
+
+  :global(.btn-label) {
+    justify-content: center;
+  }
+
+  &:hover {
+    background: $primary !important;
+    color: $white !important;
+  }
+
+  &:disabled {
+    background: transparent !important;
+    color: $text-muted !important;
+    opacity: .25 !important;
+  }
+}
+
+.active {
+  background: $light !important;
+
+  &.start {
+    border-top-left-radius: math.div($border-radius, 2);
+    border-bottom-left-radius: math.div($border-radius, 2);
+  }
+
+  &.end {
+    border-top-right-radius: math.div($border-radius, 2);
+    border-bottom-right-radius: math.div($border-radius, 2);
+  }
+
+  &:not(.current) {
+    .btn {
+      &:not(:hover) {
+        color: $primary !important;
+      }
+    }
+  }
+}
+
+.current {
+  .btn {
+    background: $primary !important;
+    color: $white !important;
+    cursor: default !important;
+    box-shadow: none !important;
+  }
+}
+
+.outside {
+  .btn {
+    color: transparentize($primary, .5);
+    font-style: italic;
+
+    &:not(:disabled):hover {
+      font-style: normal;
+    }
+  }
+}
+
+.spacer {
+  max-width: calc(100%/7);
+  min-width: calc(100%/7);
+}

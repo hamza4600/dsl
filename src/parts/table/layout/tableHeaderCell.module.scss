@@ -1,0 +1,9 @@
+@import 'css/custom/_required.scss';
+
+.center {
+  @include alignCenter;
+}
+
+.right {
+  @include alignRight;
+}

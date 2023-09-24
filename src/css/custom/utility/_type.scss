@@ -1,0 +1,35 @@
+h1 {
+  line-height: $h1-line-height;
+}
+
+h2 {
+  line-height: $h2-line-height;
+}
+
+h3 {
+  line-height: $h3-line-height;
+}
+
+h4 {
+  line-height: $h4-line-height;
+}
+
+h5 {
+  line-height: $h5-line-height;
+}
+
+.display-1 {
+  line-height: $display1-line-height;
+}
+
+.caption {
+  @include caption;
+}
+
+.small {
+  font-size: $font-size-sm !important;
+}
+
+.large {
+  font-size: $font-size-lg !important;
+}

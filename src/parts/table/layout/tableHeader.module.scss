@@ -1,0 +1,19 @@
+@import 'css/custom/_required.scss';
+
+.header {
+  background-color: $gray-000;
+  border-bottom: $border-width solid $border-color;
+  color: $secondary;
+  flex-grow: 0;
+  font-size: $font-size-xs;
+  line-height: 1.4;
+  position: sticky;
+  top: 0;
+  z-index: $zindex-sticky;
+
+  & > :global(.table-row) {
+    margin: 0;
+  }
+
+  @include hidden-mobile;
+}

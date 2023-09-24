@@ -1,0 +1,17 @@
+@import 'css/custom/_required.scss';
+
+.container:not(:first-child) {
+  margin: 20px 0;
+}
+.tableContainer{
+  border: 1px solid  $gray-200 !important;
+}
+.container h3 {
+  font-size: 18px;
+  line-height: 22px;
+  margin: 10px 0;
+}
+
+.tableContent {
+  min-height: inherit;
+}

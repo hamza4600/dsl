@@ -1,0 +1,62 @@
+@use 'sass:math';
+@import 'css/custom/_required.scss';
+
+.checklist {
+  width: 100%;
+}
+
+.row {
+  font-size: $input-font-size;
+  height: 100%;
+  margin-left: math.div(-$form-grid-gutter-width,2);
+
+  &.start {
+    justify-content: flex-start;
+  }
+
+  &.end {
+    justify-content: flex-end;
+  }
+
+  &.between {
+    justify-content: space-between;
+  }
+
+  &.inline {
+    .col {
+      flex-basis: auto;
+      flex-grow: unset;
+      width: auto;
+    }
+  }
+
+  &.column {
+    flex-direction: column;
+  }
+
+  @include media-breakpoint-down($mobile-breakpoint-down) {
+    margin: 0 math.div(-$form-grid-gutter-width-mobile,2);
+  }
+
+  &:not(.fullWidth) {
+    max-width: $input-max-width + $form-grid-gutter-width;
+
+    @include media-breakpoint-down($mobile-breakpoint-down) {
+      max-width: $input-max-width + $form-grid-gutter-width-mobile;
+    }
+  }
+}
+
+.col {
+  padding: math.div($form-grid-gutter-width, 2) math.div($form-grid-gutter-width,2);
+
+  @include media-breakpoint-down($mobile-breakpoint-down) {
+    flex-basis: 100%;
+    flex-grow: 1;
+    padding: math.div($form-grid-gutter-width-mobile,2) math.div($form-grid-gutter-width-mobile,2);
+  }
+
+  &.hide {
+    display: none;
+  }
+}

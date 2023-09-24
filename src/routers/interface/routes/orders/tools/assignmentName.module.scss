@@ -1,0 +1,12 @@
+@import 'css/custom/_required.scss';
+
+@include desktop {
+  .align {
+    padding-top: 12px;
+  }
+}
+@include mobile {
+  .align {
+    padding-top: 0;
+  }
+}

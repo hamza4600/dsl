@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+    install:
+        commands:
+          - npm install
+    build:
+        commands:
+          - echo building....
+          - ls -lart
+          - npm run build
+    post_build:
+        commands:
+          - ls -lart ./build
+          - echo deleting the old build files in s3 ......
+          - aws s3 rm s3://${TARGET_BUCKET} --recursive
+          - aws s3 rm s3://${TARGET_BUCKET2} --recursive
+cache:
+  paths:
+    - 'node_modules/**/*'
+    
+artifacts:
+  files:
+    - '**/*'
+  base-directory: build 

@@ -1,0 +1,9 @@
+@import 'css/custom/_required.scss';
+
+.vertical {
+  max-width: $input-max-width + $form-grid-gutter-width;
+
+  @include mobile {
+    max-width: $input-max-width + $form-grid-gutter-width-mobile;
+  }
+}

@@ -1,0 +1,32 @@
+@import 'css/custom/_required.scss';
+
+.entryCell {
+  align-items: center;
+  display: flex;
+
+  @include mobile {
+    flex-grow: 1 !important;
+  }
+
+  @include desktop {
+    @for $i from 1 through 10 {
+      &.width-#{$i} {
+        width: $table-cell-xs * $i !important;
+      }
+    }
+  }
+}
+
+.cell {
+  justify-content: flex-end;
+  align-items: inherit;
+}
+
+.button {
+  color: $gray-400 !important;
+  margin-right: 1rem !important;
+
+  :global(.table-entry):hover & {
+    color: $primary !important;
+  }
+}

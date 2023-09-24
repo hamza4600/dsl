@@ -1,0 +1,39 @@
+@import 'css/custom/_required.scss';
+
+.badge {
+  :global(.table-badge) {
+    min-width: 2.8rem;
+    max-width: 2.8rem;
+    margin: 0;
+  }
+}
+
+.value {
+  @include desktop {
+    flex-grow: 1;
+  }
+
+  @include mobile {
+    margin-right: 0.5rem;
+  }
+}
+
+.time {
+  @include desktop {
+    width: 6rem;
+    height: 3rem;
+  }
+
+  @include mobile {
+    flex-grow: 1;
+    color: $gray-600;
+
+    &::before {
+      content: '(';
+    }
+
+    &::after {
+      content: ')';
+    }
+  }
+}

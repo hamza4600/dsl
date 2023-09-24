@@ -1,0 +1,22 @@
+@import 'css/custom/_required.scss';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - #{$header-height});
+  padding: 2.4rem;
+  width: 100%;
+
+  @include desktop {
+    padding: 3.2rem 2rem;
+    margin-left: $sidebar-width;
+    max-width: calc(100vw - #{$sidebar-width});
+    overflow: hidden;
+    transition: $transition-base;
+
+    :global(.menu-collapse) + & {
+      margin-left: $sidebar-collapse-width;
+      max-width: calc(100vw - #{$sidebar-collapse-width});
+    }
+  }
+}

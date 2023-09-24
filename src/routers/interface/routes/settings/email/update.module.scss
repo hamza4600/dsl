@@ -1,0 +1,107 @@
+@import 'css/custom/_required.scss';
+
+.formBody {
+  max-width: inherit;
+  margin: 1rem 0;
+
+  @include media-breakpoint-up(lg) {
+    :global(.form-group) {
+      margin-bottom: 2rem !important;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    :global(.form-group) {
+      margin-bottom: 1rem !important;
+    }
+  }
+
+  :global(h3) {
+    color: $gray-800;
+    font-size: 2.5rem;
+    font-weight: $headings-font-weight;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+  }
+}
+
+.label {
+  @include media-breakpoint-up(lg) {
+    padding: 0 !important;
+    justify-content: flex-end;
+  }
+}
+
+.addRecipientButton {
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.recipients {
+  margin: 2rem 0 1rem;
+
+  .delete {
+    @include media-breakpoint-up(lg) {
+      max-width: 100px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.activities {
+  color: $gray-800;
+  margin: 2rem 0;
+
+  :global(.card-header) {
+    color: $gray-800;
+    font-size: 2.5rem;
+    font-weight: $headings-font-weight;
+    padding: 1.5rem;
+    cursor: pointer;
+  }
+
+  .activity {
+    border-top: 1px solid $gray-200;
+    padding: 1.5rem;
+    margin-top: -1px;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: $box-shadow;
+      background: linear-gradient(0deg, rgba(201, 203, 212, 0.1), rgba(201, 203, 212, 0.1)), #FFFFFF;
+      z-index: $zindex-dropdown - 1;
+    }
+  }
+
+  .activitySummary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .userName {
+      font-weight: $font-weight-bold;
+      margin-right: 5px;
+    }
+  }
+
+  .activityTable {
+    border-color: $gray-200;
+    box-sizing: border-box;
+    margin: 1.5rem 15px 0;
+
+    :global(.row) {
+      margin-bottom: 0;
+
+      :global(.col) {
+        padding: 1rem;
+        border: 1px solid $gray-200;
+        margin-bottom: -1px;
+        margin-right: -1px;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,37 @@
+@use 'sass:math';
+@import 'css/custom/_required.scss';
+
+.cell {
+  align-items: center;
+  display: flex;
+  word-break: normal;
+  line-height: $line-height-base;
+  padding: $table-cell-padding-y 5px;
+  user-select: none;
+  width: 100%;
+
+  :global(.btn-link) {
+    border: 0;
+    margin: math.div(($line-height-base * $font-size-base - px-to-rem($sprite-size-sm)), 2) 0;
+    min-height: $sprite-size-sm;
+    padding: 0;
+  }
+
+  @include alignLeft;
+
+  @include mobile {
+    padding: 0.8rem 0;
+    @include alignRight;
+  }
+
+  @include desktop {
+    min-height: 100%;
+  }
+}
+
+// .age,
+.delivered_age,
+.inventory_age,
+.tasks {
+  @include alignCenter;
+}

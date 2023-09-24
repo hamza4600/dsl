@@ -1,0 +1,75 @@
+@import 'css/custom/_required.scss';
+
+.icon {
+  color: $nav-link-sprite;
+
+  &--wrapper {
+    cursor: pointer;
+  }
+}
+
+.fade {
+  transition: opacity .15s linear;
+}
+
+.drawer {
+  &--container {
+    transition:transform .3s ease-in-out;
+    top: 7.2rem;
+    bottom:0;
+    right: 0;
+    width: 528px;
+    max-width: 37vw;
+    position:fixed;
+    z-index: $zindex-fixed+2;
+    background-color: $white;
+    box-shadow: 0 4px 12px rgba(37, 44, 100, 0.1);
+
+    &__visible {
+      transform:none;
+    }
+
+    &__hidden {
+      transform:translateX(100%);
+    }
+  }
+
+  &--head {
+    background-color: $gray-000;
+    padding: 21px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid $gray-200;
+  }
+
+  &--body {
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100vh;
+    overflow: auto;
+  }
+
+  &--backdrop {
+    background-color: rgb(163,167,174);
+    position:fixed;
+    top:0;
+    left:0;
+    z-index: $zindex-fixed+1;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  &__visible {
+    opacity:.5
+  }
+
+  &__hidden {
+    opacity:0;
+  }
+}

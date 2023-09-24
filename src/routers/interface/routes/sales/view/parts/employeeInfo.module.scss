@@ -1,0 +1,15 @@
+.text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.badge{
+  margin-left: inherit;
+}
+
+.spanBody {
+  span {
+    grid-column: span 1 / span 1;
+  }
+}

@@ -1,0 +1,21 @@
+@import 'css/custom/_required.scss';
+
+$total-width: $scrollbar-width + $scrollbar-padding * 2 + $border-width;
+
+.container {
+  background: transparent;
+  display: flex;
+  max-height: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+
+  &.vertical, &.multi {
+    padding-right: $total-width;
+  }
+
+  &.horizontal, &.multi {
+    padding-bottom: $total-width;
+  }
+}

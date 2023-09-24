@@ -1,0 +1,67 @@
+@import 'css/custom/_required.scss';
+
+.button {
+  border-radius: 0;
+  color: $nav-link-color;
+  justify-content: flex-start !important;
+  max-height: inherit !important;
+  min-height: inherit !important;
+  padding: $nav-link-padding-y $nav-link-padding-x;
+
+  
+  svg {
+    color: $nav-link-sprite;
+  }
+
+  &:hover {
+    color: $nav-link-active-color;
+
+    svg {
+      color: $nav-link-active-color;
+    }
+  }
+
+  &.secondary {
+    background-color: transparentize($light, .5);
+    color: $primary;
+
+    svg {
+      color: $primary;
+    }
+
+    @include hover {
+      background-color: $primary;
+      color: $white;
+
+      svg {
+        color: $white;
+      }
+    }
+  }
+
+  & + :global(.nav-item) {
+    @include mobile {
+      margin-top: $nav-link-padding-y-mobile;
+    }
+  }
+
+  :global(.nav-item) + :global(.nav-item) & {
+    @include mobile {
+      margin-top: $nav-link-padding-y-mobile;
+    }
+  }
+}
+.btn{
+  @include mobile {
+  margin: $nav-link-padding-y-mobile*2 0;
+  border: 1px $light solid;
+  border-radius: 5px;
+}
+}
+.closeBtn{
+  @include mobile {
+  margin: $nav-link-padding-y-mobile 0 !important;
+  border: none !important;
+  border-radius: 5px !important;
+  }
+}

@@ -1,0 +1,22 @@
+@import 'css/custom/_required.scss';
+
+.container {
+  align-items: center;
+  background: $sidebar-bg;
+  border-bottom: $border-width solid $border-color;
+  display: flex;
+  justify-content: space-between;
+  max-height: $header-height;
+  min-height: $header-height;
+  padding: 0 $sidebar-padding-x/2;
+  width: 100%;
+}
+
+.title {
+  margin: 0 $sidebar-padding-x/2;
+}
+
+.close {
+  background: $light;
+  color: $secondary;
+}

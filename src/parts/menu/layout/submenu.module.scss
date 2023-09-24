@@ -1,0 +1,61 @@
+@import 'css/custom/_required.scss';
+
+.icon {
+  color: $light;
+  opacity: 1;
+  transition: $transition-base;
+
+  .link:hover > & {
+    color: $primary;
+  }
+
+  :global(.menu-collapse) & {
+    opacity: 0;
+  }
+
+  @include mobile {
+    margin-left: 1.6rem;
+  }
+
+  @include desktop {
+    position: absolute;
+    right: $nav-link-padding-x;
+  }
+}
+
+.submenu {
+  transition: $transition-base;
+
+  :global(.active) + &.level-0 {
+    background: $component-active-bg;
+  }
+
+  @include mobile {
+    padding-left: $nav-link-padding-x;
+
+    &.level-1 {
+      padding-left: 0;
+    }
+  }
+}
+
+.list {
+  @include mobile {
+    border-bottom: $border-width solid $border-color;
+    border-top: $border-width solid $border-color;
+    margin-bottom: $nav-link-padding-y-mobile;
+    padding-top: $nav-link-padding-y-mobile;
+
+    &.last {
+      border-bottom: 0;
+      margin-bottom: -1rem;
+    }
+
+    :global(.active) + .submenu.level-0 > & {
+      border-bottom: 0;
+      border-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+    }
+  }
+}

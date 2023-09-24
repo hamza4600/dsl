@@ -1,0 +1,28 @@
+@import 'css/custom/_required.scss';
+
+.row {
+  @include mobile {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.col {
+  @include mobile {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  > div {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.col1 {
+  @include desktop {
+    max-width: 32rem;
+  }
+}

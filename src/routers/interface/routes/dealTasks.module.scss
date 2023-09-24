@@ -1,0 +1,65 @@
+@import 'css/custom/_required.scss';
+
+.body {
+  @include mobile {
+    :global(.table-entry) {
+      margin-bottom: 0;
+    }
+  }
+}
+.container{
+  border:2px solid #80808033;
+  margin-top:30px;
+  
+  @include mobile{
+    margin-top:0px;
+    background-color: #ffffff !important;
+  }
+}
+
+.accordion {
+  transition: $transition-base;
+  
+  &:hover {
+    box-shadow: $box-shadow;
+    z-index: $zindex-dropdown - 1;
+  }
+
+  :global(.table-entry) {
+    background: $white;
+  }
+
+  @include desktop {
+    &:not(:last-child) {
+      :global(.table-entry) {
+        border-bottom: $border-width solid $border-color;
+      }
+    }
+
+    &:nth-child(2n - 1) {
+      :global(.table-entry) {
+        background: $gray-000;
+      }
+    }
+  }
+  
+  @include mobile {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.label{
+  color:$primary; 
+}
+.tableRow{
+  margin: 0 10px;
+  border-bottom: 2px solid #80808033;
+  line-height:40px;
+
+}
+.iconColor{
+  color: $primary;
+}
+.taskBorder{
+  border-top: 0.25rem solid #EBECF0 !important;
+}

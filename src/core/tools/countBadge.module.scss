@@ -1,0 +1,10 @@
+@import 'css/custom/_required.scss';
+
+.badge {
+  background-color: $gray-200;
+
+  &:global(.badge-orange) {
+    background-color: lighten($orange, 45%) !important;
+    color: $orange;
+  }
+}

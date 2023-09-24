@@ -1,0 +1,69 @@
+@import 'css/custom/_required.scss';
+
+@mixin col-size($mobile, $desktop) {
+  flex: 0 0 $mobile;
+
+  @for $i from 1 through $grid-columns {
+    &:global(.col-#{$i}) {
+      @include make-col($i, $grid-columns);
+    }
+  }
+
+  @include desktop {
+    flex-basis: $desktop !important;
+  }
+}
+
+.col {
+  padding: 0 ;
+  margin: 0;
+  min-width: 0;
+  word-break: break-all;
+  @include desktop {
+    flex-grow: 1 !important;
+
+    & > * {
+      height: 100%;
+    }
+  }
+
+  @include mobile {
+    &.xs, &.sm, &.md, &.lg, &.xl {
+      @include col-size(25%, $table-cell-md);
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &.xs, &.sm, &.md, &.lg, &.xl {
+      @include col-size(50%, $table-cell-md);
+    }
+  }
+
+  &.actions {
+    @include mobile {
+      flex-basis: 87.5%;
+    }
+  }
+}
+
+
+
+.xs {
+  @include col-size(8.3333333333333%, $table-cell-xs);
+}
+
+.sm {
+  @include col-size(16.6666666666667%, $table-cell-sm);
+}
+
+.md {
+  @include col-size(25%, $table-cell-md);
+}
+
+.lg {
+  @include col-size(33.3333333333333%, $table-cell-lg);
+}
+.xl {
+  @include col-size(50%, $table-cell-xl);
+}
+

@@ -1,0 +1,29 @@
+@import 'css/custom/_required.scss';
+
+.form {
+  display: flex;
+  flex-grow: 1;
+  padding: $input-padding-y 0;
+
+  &:not(:first-child) {
+    margin-top: $form-group-margin-bottom;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.body {
+  flex-grow: 0;
+}
+
+.footer {
+  :global(.form-col):last-child {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

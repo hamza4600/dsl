@@ -1,0 +1,50 @@
+@use 'sass:math';
+@import 'css/custom/_required.scss';
+@import '../table.module.scss';
+
+.sortButton {
+  align-items: center;
+  color: $secondary;
+  display: inline-flex;
+  height: 100%;
+  padding: 0;
+  width: 100%;
+
+  @include hover {
+    color: $primary;
+  }
+
+  &[data-order='A'] {
+    .asc {
+      color: $primary;
+    }
+    .desc {
+      color: $light;
+    }
+  }
+  &[data-order='D'] {
+    .asc {
+      color: $light;
+    }
+    .desc {
+      color: $primary;
+    }
+  }
+}
+
+.sortToggle {
+  min-height: math.div($sprite-size-lg,2);
+  margin-left: 0.4rem;
+  margin-right: -(math.div(px-to-rem($sprite-size-lg), 2) + 0.1rem);
+  position: relative;
+  min-width: math.div($sprite-size-lg, 2);
+
+  .sprite {
+    color: $light;
+    position: absolute;
+    left: math.div(-$sprite-size-lg, 4);
+    top: math.div(-$sprite-size-lg, 4);
+    transform: scale(0.6);
+    transition: $transition-base;
+  }
+}

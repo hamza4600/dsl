@@ -1,0 +1,30 @@
+@import 'css/custom/_required.scss';
+
+.button {
+  max-width: 15rem;
+}
+
+.error {
+  :global(.col) {
+    padding: 0 0.8rem;
+  }
+  
+  input {
+    font-size: $font-size-base;
+  }
+}
+
+.red {
+  input {
+    color: $danger;
+  }
+}
+
+.fileInput {
+  margin-bottom: 2rem;
+}
+
+.paragraph {
+  color: $gray-600;
+  font-size: $font-size-lg;
+}

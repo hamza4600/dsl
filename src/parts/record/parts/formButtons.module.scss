@@ -1,0 +1,13 @@
+@use 'sass:math';
+@import 'css/custom/_required.scss';
+
+.buttons {
+  display: flex;
+  margin: 0 math.div(-$form-grid-gutter-width, 2);
+
+  & > * {
+    margin: 0 math.div($form-grid-gutter-width, 2);
+    flex-basis: 12rem;
+    flex-grow: 0;
+  }
+}

@@ -1,0 +1,50 @@
+@import 'css/custom/_required.scss';
+
+.container {
+  width: 100%;
+  @include mobile{
+    margin-left: -5px;
+  }
+}
+.keyword {
+  border:0;
+  outline:0;
+  background-color: transparent !important;
+@include media-breakpoint-down(sm) {
+  width: 70% !important;
+}
+@include media-breakpoint-up(md) {
+  width: 85% !important;
+  
+}
+@include desktop{
+  height: 10vh !important;
+} 
+  padding: 25px 0 0 0;
+  font-size: medium;
+  color: aliceblue;
+}
+.keyword::placeholder {
+  color: aliceblue;
+  opacity: 0.3;
+  font-size: medium;
+}
+.keyword:focus {
+  outline:none!important;
+}
+
+.search { 
+  &:hover { 
+    background-color: transparent !important;
+    border: none;
+  };
+  .btn-primary:focus-within {
+    background-color: transparent !important;
+}
+ svg {
+   height: 22px;
+   width: 20px;
+  }
+  padding-top: 0px !important;
+  display: inline-block;
+}

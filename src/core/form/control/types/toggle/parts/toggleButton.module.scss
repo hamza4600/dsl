@@ -1,0 +1,49 @@
+@import 'css/custom/_required.scss';
+
+.button {
+  &.active {
+    @include disabled {
+      background: $primary !important;
+      box-shadow: 0px 4px 12px rgba(0, 8, 51, 0.1);
+    }
+  }
+
+  &:not(.active) {
+    background-color: $white !important;
+    border-color: $input-border-color !important;
+    color: $secondary !important;
+
+    svg {
+      color: $input-icon-color;
+    }
+
+    @include hover {
+      box-shadow: none !important;
+      color: $primary !important;
+
+      svg {
+        color: $primary;
+      }
+    }
+
+    @include active {
+      border-color: $border-color !important;
+      box-shadow: none !important;
+      color: $primary !important;
+      z-index: 300;
+    }
+
+    @include disabled {
+      background: $input-disabled-bg !important;
+      color: $input-icon-color !important;
+
+      svg {
+        color: $input-icon-color;
+      }
+    }
+  }
+
+  & > :global(.btn-label) {
+    justify-content: center;
+  }
+}

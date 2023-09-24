@@ -1,0 +1,30 @@
+@import 'css/custom/_required.scss';
+
+.item {
+  cursor: pointer;
+  display: flex;
+  font-size: $input-font-size;
+  justify-content: space-between;
+  line-height: $input-line-height;
+  padding: $input-padding-y $input-padding-x !important;
+
+  &[data-selected="true"] {
+    background: $component-active-bg;
+    color:  $primary ;
+  }
+  &[data-selected="false"]:hover {
+    background: $component-active-bg;
+  }
+}
+
+.label {
+  white-space: nowrap;
+}
+
+.icon {
+  margin-left: $input-padding-x;
+
+  .item[data-selected="false"] > & {
+    opacity: 0;
+  }
+}

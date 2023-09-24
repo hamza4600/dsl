@@ -1,0 +1,7 @@
+@use 'sass:math';
+@import 'css/custom/_required.scss';
+
+:export {
+  margin: strip-unit(rem-to-px(math.div($form-group-margin-bottom, 2)));
+  border: strip-unit(rem-to-px($border-width * 2));
+}

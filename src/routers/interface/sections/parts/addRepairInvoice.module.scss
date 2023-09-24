@@ -1,0 +1,13 @@
+@import 'css/custom/_required.scss';
+
+.form :global {
+  .input-group > .form-control {
+    background-color: $white !important;
+  }
+}
+
+.label {
+  @include desktop {
+    max-width: 32rem;
+  }
+}

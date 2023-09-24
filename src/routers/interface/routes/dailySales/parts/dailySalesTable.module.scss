@@ -1,0 +1,19 @@
+.table {
+  &--row {
+    border: 1px solid #E9ECF4;
+  }
+
+  &--cell {
+    background-color: #FFFFFF !important;
+    padding: .5rem 0;
+  }
+
+  &__empty {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: .75rem;
+    background-color: #FFFFFF;
+    border: 1px solid #E9ECF4;
+  }
+}

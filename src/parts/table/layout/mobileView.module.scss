@@ -1,0 +1,40 @@
+
+@import 'css/custom/_required.scss';
+
+.container{
+    border:2px solid #80808033;
+    margin-top:30px;
+}
+.label{
+    color:gray 
+}
+.tableRow{
+    margin: 0 10px;
+    border-bottom: 2px solid #80808033;
+    line-height:40px;
+
+}
+.tableRow:last-child{
+    border: none;
+}
+.cell{
+    display: flex !important;
+    color: $dark;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 14px;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.message {
+    color: $text-muted;
+    font-style: italic;
+    text-align: center;
+    padding: 2rem;
+  }
+  .empty {
+    align-items: center;
+    justify-content: center;
+  }

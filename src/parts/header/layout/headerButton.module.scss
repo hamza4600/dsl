@@ -1,0 +1,35 @@
+@import 'css/custom/_required.scss';
+
+.button {
+  max-height: $header-height;
+  min-height: $header-height;
+  border: 0;
+  border-radius: 0;
+
+  &:global(.btn-square) {
+    max-width: $header-height;
+    min-width: $header-height;
+  }
+
+  @include hover {
+    @include desktop{
+      background-color: transparentize($dark, .8) !important;
+      box-shadow: none !important;
+    }
+  }
+
+  &:global(.active) {
+    background-color: transparentize($dark, .8) !important;
+
+    @include before {
+      background-color: $accent;
+      bottom: 0;
+      height: 3px;
+      width: 100%;
+    }
+  }
+
+  :global(.btn-label) {
+    font-size: $font-size-xl;
+  }
+}

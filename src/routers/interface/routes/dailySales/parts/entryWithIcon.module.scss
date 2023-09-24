@@ -1,0 +1,28 @@
+@import 'css/custom/_required.scss';
+
+.container {
+  &__bordered {
+    border-right: 1px solid #CED1DB;
+  }
+
+  .icon {
+    color: $nav-link-sprite;
+  }
+
+  .text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+
+    &_primary {
+      color: $gray-800;
+    }
+
+    &_secondary {
+      color: $gray-600;
+      margin: 0 .5rem;
+    }
+  }
+
+}

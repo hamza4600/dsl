@@ -1,0 +1,10 @@
+.dropdown-toggle {
+  &:after {
+    display: none; // fix for dropdown
+  }
+}
+
+.dropdown-menu {
+  display: block; // fix for dropdown
+  position: relative !important; // fix for dropdown
+}

@@ -1,0 +1,28 @@
+@import 'css/custom/_required.scss';
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  @include desktop {
+    min-height: $table-row-height * $table-min-rows - $border-width;
+  }
+}
+
+.empty {
+  align-items: center;
+  justify-content: center;
+}
+
+.message {
+  color: $text-muted;
+  font-style: italic;
+  padding: 2rem;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}

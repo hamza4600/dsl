@@ -1,0 +1,72 @@
+@import 'css/custom/_required.scss';
+
+.container:not(:first-child) {
+  // margin: 20px 0;
+  
+  @include mobile{
+    border:2px solid #80808033;
+    margin-top:10px;
+  }
+}
+
+.container h3{
+  @include desktop{
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0 0 10px 0;}
+}
+.heading{
+  margin: 10px 0 0 0 !important;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.tableContent {
+  min-height: inherit;
+}
+
+.message {
+  color: $text-muted;
+  font-style: italic;
+  padding: 2rem;
+}
+
+
+
+.label{
+    color:gray 
+}
+.tableRow{
+    margin: 0 10px;
+    border-bottom: 2px solid #80808033;
+    line-height:40px;
+
+}
+.tableRow:last-child{
+    border: none;
+}
+.cell{
+    display: flex !important;
+    color: $dark;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 14px;
+    align-items: center;
+}
+.message {
+    color: $text-muted;
+    font-style: italic;
+    text-align: center;
+    padding: 2rem;
+  }
+  .empty {
+    align-items: center;
+    justify-content: center;
+  }
+
+.searchHeading h2{
+  cursor: pointer;
+  display: inline-block;
+}

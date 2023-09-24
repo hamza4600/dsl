@@ -1,0 +1,28 @@
+@import 'css/custom/_required.scss';
+
+$badge-padding: .5rem;
+
+.tooltip {
+  margin-left: auto;
+  @include desktop {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.badge {
+  max-height: $font-size-base * $line-height-base + 1rem;
+  min-height: $font-size-base * $line-height-base + 1rem;
+  margin: ($table-cell-padding-y - $badge-padding) 0.5rem;
+  padding: $badge-padding;
+  @include desktop {width: 90%;}
+  @include mobile {margin-left: auto;}
+
+  :global(.table-cell) {
+    display: block;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+  }
+}

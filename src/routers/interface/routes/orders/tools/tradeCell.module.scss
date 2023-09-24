@@ -1,0 +1,11 @@
+@import 'css/custom/_required.scss';
+
+.textAlign {
+  @include mobile {
+    text-align: right;
+  }
+  @include desktop {
+    align-items: center;
+
+  }
+}

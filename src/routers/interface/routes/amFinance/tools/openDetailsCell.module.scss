@@ -1,0 +1,19 @@
+@import 'css/custom/_required.scss';
+
+.cell {
+  .icon {
+    color: $gray-400;
+    margin-right: 1rem;
+    transition: $transition-base;
+    
+    &.hovered {
+      color: $primary;
+    }
+  
+    &:active {
+      background-color: transparent !important;
+      color: $primary !important;
+    }
+  }  
+}
+

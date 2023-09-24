@@ -1,0 +1,416 @@
+// Color system
+
+$white:    #fff !default;
+$gray-000: #F9F9FA;
+$gray-200: #EBECF0;
+$gray-400: #CED1DB;
+$gray-500: #A4A8AE;
+$gray-600: #6B7492;
+$gray-800: #091749;
+$black:    #000 !default;
+
+$blue:    #0F6DE0;
+$red:     #D61D30;
+$orange:  #DB6C0A;
+$yellow:  #DDB52A;
+$green:   #15AC54;
+
+$primary:             #2D5499;
+$secondary:           $gray-600;
+$accent:              #EA8C5D; // Custom parameter
+$highlight:           $blue; // Custom parameter
+$danger:              $red;
+$warning:             $orange;
+$success:             $green;
+
+$dark:                $gray-800;
+$light:               $gray-400;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "accent":         $accent,   // Custom parameter
+    "highlight":      $highlight, // Custom parameter
+    "orange":         $orange,
+    "gray-000":       $gray-000,
+    "gray-200":       $gray-200,
+    "gray-400":       $gray-400,
+    "gray-600":       $gray-600,
+    "gray-800":       $gray-800
+  ),
+  $theme-colors
+);
+
+
+// Options
+
+$enable-validation-icons:                     false;
+
+
+// Body
+
+$body-bg:                   $white;
+$body-color:                $gray-800;
+$body-size:                 10px;
+
+
+// Links
+
+$link-color:                $blue;
+$link-hover-color:          $link-color;
+
+
+// Paragraphs
+
+$paragraph-margin-bottom:   .8rem;
+
+
+// Grid breakpoints
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 470px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1440px
+);
+$mobile-breakpoint-up:   'lg';
+$mobile-breakpoint-down: 'md';
+
+
+// Grid columns
+
+$grid-columns:                24;
+
+
+// Components
+
+$line-height-xl:              1.25;
+$line-height-lg:              1.428571428571429;
+$line-height-sm:              1.2;
+
+$border-width:                .1rem;
+$border-color:                $gray-200;
+
+$border-radius:               .4rem;
+$border-radius-lg:            $border-radius;
+$border-radius-sm:            $border-radius;
+
+$box-shadow:                  0px 4px 12px rgba(39, 59, 157, 0.1);
+
+$component-active-color:      $primary;
+$component-active-bg:         transparentize($secondary, .95);
+
+$transition-time:             .2s; // Custom parameter
+$transition-base:             all $transition-time ease-in-out;
+$transition-fade:             opacity .15s linear !default;
+$transition-collapse:         height .35s ease !default;
+
+
+// Typoegraphy
+
+$font-family-sans-serif:      Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-condensed:       "Roboto Condensed", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; // Custom parameter
+$font-size-base:              1.2rem;
+$font-size-xl:                1.6rem; // Custom parameter
+$font-size-lg:                1.4rem;
+$font-size-sm:                1.1rem;
+$font-size-xs:                1.0rem;
+
+$font-weight-normal:          normal;
+$font-weight-bolder:          500;
+
+$line-height-base:            1.166666666666667;
+
+$h1-font-size:                3.2rem;
+$h2-font-size:                2.8rem;
+$h3-font-size:                1.8rem;
+$h4-font-size:                $font-size-xl;
+$h5-font-size:                $font-size-lg;
+
+$h1-line-height:              4.2rem; // Custom parameter
+$h2-line-height:              3.2rem; // Custom parameter
+$h3-line-height:              2.2rem; // Custom parameter
+$h4-line-height:              $line-height-xl; // Custom parameter
+$h5-line-height:              $line-height-lg; // Custom parameter
+
+$headings-margin-bottom:      0;
+$headings-font-weight:        $font-weight-normal;
+
+$display1-size:               4.8rem;
+$display1-line-height:        5.6rem; // Custom parameter
+$display1-weight:             $font-weight-normal;
+
+$caption-color:               $secondary; // Custom parameter
+$caption-size:                1.2rem; // Custom parameter
+$caption-line-height:         1.166666666666667; // Custom parameter
+
+$small-font-size:             $font-size-sm;
+
+$text-muted:                  $gray-600;
+
+$hr-border-color:             $gray-400;
+
+
+// TABLES
+
+$table-cell-padding-x:        .8rem;
+$table-cell-padding-y:        1.3rem;
+
+$table-row-height:            $font-size-base * $line-height-base + $table-cell-padding-y * 2 + $border-width;
+$table-min-rows:              10;
+
+$table-cell-xs:               2.5rem + $table-cell-padding-x * 2;
+$table-cell-sm:               5rem + $table-cell-padding-x * 2;
+$table-cell-md:               8rem + $table-cell-padding-x * 2;
+$table-cell-lg:               13rem + $table-cell-padding-x * 2;
+$table-cell-xl:               31rem + $table-cell-padding-x * 2;
+
+
+
+
+// Buttons + Forms
+
+$input-btn-padding-y:         1.2rem;
+$input-btn-padding-x:         1.2rem;
+$input-btn-font-size:         $font-size-lg;
+$input-btn-line-height:       1.142857142857143;
+
+$input-btn-focus-width:       0;
+
+$input-btn-padding-y-sm:      .7rem;
+$input-btn-padding-x-sm:      .9rem;
+$input-btn-font-size-sm:      $input-btn-font-size;
+$input-btn-line-height-sm:    $input-btn-line-height;
+
+$input-btn-padding-y-lg:      0;
+$input-btn-padding-x-lg:      2.4rem;
+
+
+// Buttons
+
+$btn-disabled-opacity:        1;
+
+$btn-height:                  $input-btn-font-size * $input-btn-line-height + ($input-btn-padding-y + $border-width) * 2; // Custom parameter
+$btn-height-sm:               $input-btn-font-size-sm * $input-btn-line-height-sm + ($input-btn-padding-y-sm + $border-width) * 2; // Custom parameter
+
+$btn-block-spacing-y:         0;
+
+
+// Forms
+
+$label-width:                           32rem; // Custom parameter
+$label-margin-bottom:                   0;
+$label-required-indicator:              '*';
+
+$input-bg:                              $white;
+
+$input-color:                           $body-color;
+$input-icon-color:                      $gray-500; // Custom parameter
+$input-border-color:                    $border-color;
+$input-box-shadow:                      none;
+
+$input-placeholder-color:               $secondary;
+
+$input-focus-border-color:              $gray-400;
+
+$input-empty-bg:                        mix($white, $gray-400, 90%);
+$input-empty-border-color:              $input-border-color;
+
+$input-disabled-bg:                     $input-empty-bg;
+$input-disabled-color:                  $gray-400; // Custom parameter
+$input-disabled-border-color:           $input-border-color; // Custom parameter
+
+$input-max-width:                       38rem; // Custom parameter
+
+$custom-control-label-color:            $dark;
+$custom-control-label-disabled-color:   $secondary;
+$custom-control-label-weight:           $font-weight-normal;
+
+$form-text-margin-top:                  0;
+
+$form-grid-gutter-width:                1.6rem;
+$form-grid-gutter-width-mobile:         1.2rem; // Custom parameter
+$form-group-margin-bottom:              2.4rem;
+
+$input-group-addon-color:               $input-border-color;
+$input-group-addon-bg:                  $input-bg;
+
+$custom-control-label-color:            $secondary; // Custom parameter
+$custom-control-label-disabled-color:   $light;
+
+
+// Navs
+
+$nav-link-padding-y:                1.5rem;
+$nav-link-padding-x:                2rem;
+$nav-link-padding-y-mobile:         1.2rem;
+$nav-link-padding-x-mobile:         2.4rem;
+$nav-link-padding-x-collapse:       2.4rem;
+
+$nav-link-bg:                       $white; // Custom parameter
+$nav-link-color:                    $secondary; // Custom parameter
+$nav-link-sprite:                   #DADADA; // Custom parameter
+$nav-link-active-bg:                $component-active-bg; // Custom parameter
+$nav-link-active-color:             $component-active-color; // Custom parameter
+
+$submenu-link-padding-y:            .9rem; // Custom parameter
+
+
+// Dropdowns
+
+$dropdown-padding-y:                0;
+$dropdown-spacer:                   0;
+$dropdown-bg:                       $white !default;
+$dropdown-border-color:             $border-color;
+$dropdown-border-radius:            0;
+$dropdown-inner-border-radius:      0;
+$dropdown-box-shadow:               $box-shadow;
+
+$dropdown-link-color:               $body-color;
+$dropdown-link-hover-color:         $primary;
+$dropdown-link-hover-bg:            transparent;
+
+$dropdown-link-active-color:        $component-active-color !default;
+$dropdown-link-active-bg:           $component-active-bg !default;
+
+$dropdown-item-padding-y:           .8rem;
+$dropdown-item-padding-x:           1.2rem;
+
+$dropdown-caret-size:               1rem; // Custom parameter
+
+
+// Cards
+
+$card-spacer-y:                     1.2rem;
+$card-spacer-x:                     2rem;
+$card-border-radius:                0;
+$card-border-color:                 $border-color;
+$card-cap-bg:                       transparent;
+$card-bg:                           $white;
+
+
+// Tooltips
+
+$tooltip-font-size:                 $font-size-lg;
+$tooltip-color:                     $white;
+$tooltip-bg:                        $body-color;
+$tooltip-opacity:                   1;
+$tooltip-padding-y:                 .5rem;
+$tooltip-padding-x:                 1rem;
+
+
+// Badges
+
+$badge-height:                      1.6rem;   // Custom parameter
+
+$badge-font-size:                   $font-size-base;
+$badge-font-weight:                 $font-weight-bolder;
+$badge-padding-y:                   .2rem;
+$badge-padding-x:                   .2rem;
+$badge-border-radius:               $border-radius-sm;
+
+$badge-pill-padding-x:              .6rem;
+$badge-pill-border-radius:          $badge-height;
+
+
+// Modals
+
+$modal-content-border-width:        0;
+
+$modal-backdrop-bg:                 $black;
+$modal-backdrop-opacity:            .3;
+$modal-content-border-width:        0;
+$modal-content-border-radius:       0;
+
+$modal-sm:                          30rem;
+$modal-md:                          41rem;
+$modal-lg:                          52rem;
+
+
+// Alerts
+
+$alert-padding-y:                   $input-btn-padding-y;
+$alert-padding-x:                   $input-btn-padding-x;
+$alert-margin-bottom:               2rem;
+$alert-border-radius:               0;
+$alert-link-font-weight:            $font-weight-normal;
+$alert-border-width:                0;
+$alert-font-size:                   $input-btn-font-size; // Custom parameter
+$alert-line-height:                 $input-btn-line-height; // Custom parameter
+
+$alert-bg-level:                    -8.5;
+$alert-border-level:                0;
+$alert-color-level:                 6;
+
+
+// List group
+
+$list-group-bg:                     transparent;
+$list-group-border-color:           $gray-200;
+
+$list-group-item-padding-y:         0;
+$list-group-item-padding-x:         0;
+
+
+// Custom
+
+$logo-height:                 42px;    // must be px
+$logo-width:                  109px;   // must be px
+$logo-small:                  40.37px; // must be px
+
+$sprite-size-xl:              30px; // must be px
+$sprite-size-lg:              24px; // must be px
+$sprite-size-md:              20px; // must be px
+$sprite-size-sm:              18px; // must be px
+$sprite-size-xs:              16px; // must be px
+
+$scrollbar-bg:      $gray-000;
+$scrollbar-color:   $light;
+$scrollbar-hover:   $primary;
+$scrollbar-width:   1rem;
+$scrollbar-padding: .5rem;
+$scrollbar-border-radius: 0;
+
+/*
+$menu-lg:                     23rem;
+$menu-sm:                     8rem;
+$menu-padding-y:              2rem;
+$menu-padding-x-lg:           3rem;
+$menu-padding-x-sm:           1rem;
+$menu-padding-y-mobile:       2rem;
+$menu-padding-x-mobile:       2rem;
+$menu-item-padding-y:         1rem;
+$menu-item-padding-y-mobile:  2rem;
+$menu-item-padding-x-mobile:  1.5rem;
+
+$interface-header-padding-y:  1.2rem;
+$interface-header-padding-x:  3rem;
+*/
+
+$header-height:               7.2rem;
+$header-padding:              2.4rem;
+$header-zindex:               2000;
+
+$sidebar-width:               22rem;
+$sidebar-collapse-width:      px-to-rem($sprite-size-md) + $nav-link-padding-x-collapse * 2;
+$sidebar-bg:                  $white;
+$sidebar-padding-y:           1.2rem;
+$sidebar-padding-x:           2rem;             
+
+
+// Disable RFS by setting $enable-responsive-font-sizes to false
+$enable-responsive-font-sizes: false;
+
+
+// Dark Theme
+
+$dark-bg:                     $primary;
+$dark-color:                  $white;
+$dark-muted:                  transparentize($white, .5);
+$dark-border-color:           mix($gray-200, $dark-bg, 20%);
+$dark-input-bg:               transparentize($white, .7);
+$dark-input-color:            $dark-color;
+$dark-input-border-color:     $dark-border-color;
+$dark-placeholder-color:      transparentize($dark-input-color, .4);
+$dark-btn-color:              $dark-color;

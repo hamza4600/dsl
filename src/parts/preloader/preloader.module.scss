@@ -1,0 +1,17 @@
+@import 'css/custom/_required.scss';
+
+.preloader {
+  height: 100%;
+}
+
+.icon {
+  height: 5rem;
+  width: 5rem;
+  color: $gray-400;
+}
+
+.spinner {
+  height: 4rem;
+  width: 4rem;
+  border-width: 0.5rem;
+}

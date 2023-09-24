@@ -1,0 +1,55 @@
+@import 'css/custom/_required.scss';
+
+.row {
+  height: 100%;
+  padding-left: 1px;
+  margin: 0;
+
+  @include desktop {
+    flex-wrap: nowrap;
+  }
+}
+
+.rowNumber {
+  order: -2;
+
+  @include mobile {
+    background-color: mix($white, $yellow, 80%);
+    border: $border-width solid $yellow;
+    color: $yellow;
+    flex-basis: 12.5% !important;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bolder;
+    line-height: $table-row-height;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+
+    :global(.table-cell) {
+      height: $table-row-height;
+      @include alignCenter;
+      align-items: center;
+      padding: 0;
+    }
+
+    & + :global(.table-col) {
+      border-left: 0;
+    }
+  }
+
+  @include desktop {
+    flex-grow: 0;
+
+    :global(.table-cell) {
+      padding-left: 1rem;
+    }
+  }
+}
+
+.actions {
+  order: 1;
+
+  @include mobile {
+    order: -1;
+  }
+}

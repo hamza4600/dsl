@@ -1,0 +1,13 @@
+@import 'css/custom/_required.scss';
+
+.container{
+    display: flex;
+    align-items: center;
+}
+.icon{
+    color: $gray-400 !important;
+    margin-right: 5px;
+}
+.icon:hover{
+    color: $primary !important;
+}

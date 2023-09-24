@@ -1,0 +1,16 @@
+@use 'sass:math';
+@import 'css/custom/_required.scss';
+
+.group {
+  padding: 0;
+
+  &:not(.inline) > *:nth-child(2) {
+    padding-top: math.div($form-grid-gutter-width,2);
+  }
+}
+
+.rangePicker {
+  &:not(.vertical):not(.columns):not(.fullWidth) {
+    max-width:math.div($input-max-width + $form-grid-gutter-width, 2);
+  }
+}

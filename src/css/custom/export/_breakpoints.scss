@@ -1,0 +1,9 @@
+@import "../required";
+
+:export {
+  @each $breakpoint, $value in $grid-breakpoints {
+    #{$breakpoint}: strip-unit($value);
+  }
+  mobile: $mobile-breakpoint-down;
+  desktop: $mobile-breakpoint-up;
+}

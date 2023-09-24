@@ -1,0 +1,59 @@
+@import 'css/custom/_required.scss';
+
+.field {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 8px;
+  align-items:start;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+
+    &--description {
+      color: $gray-800;
+    }
+    &--descriptionL {
+      color: $gray-600;
+    }
+    &--descriptionR {
+      display: flex;
+      color: $red;
+    }
+  }
+
+  &--title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: $gray-600;
+  }
+  &--titleR {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: $red;
+  }
+
+  &--body {
+    grid-column: span 3 / span 3;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    span {
+      grid-column: span 3 / span 3;
+      font-size: 14px;
+    }
+
+    &__table {
+      span {
+        grid-column: span 1 / span 3;
+      }
+    }
+  }
+}

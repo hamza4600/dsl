@@ -1,0 +1,135 @@
+@import 'css/custom/_required.scss';
+
+.tasks {
+  position: relative;
+  padding: 0.8rem 2.4rem;
+  z-index: 100;
+
+  @include mobile {
+    padding: 0rem 2.4rem !important;
+    margin-top: -28px;
+    margin-left: 0px;
+    margin-right: 3px;
+    background-color: #ffffff;
+  }
+
+  .row {
+    margin-top: -1px;
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+
+    @include desktop {
+      padding-top: 2.5rem;
+    }
+  }
+
+  .closeButton {
+    @include mobile{
+display: none;
+    }
+    @include desktop{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2rem !important;
+    height: 2rem !important;
+    min-width: auto;
+    min-height: auto;
+    border-radius: 50%;
+    padding: 0;
+  }
+  }
+}
+.closeButtonMobile {
+  @include mobile{
+    // position: absolute;
+    position: absolute;
+    top: -28px;
+    right: -16px;
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    min-width: auto;
+    min-height: auto;
+    border-radius: 50%;
+    padding: 0;
+  }
+}
+.task {
+  border-bottom: 0.1rem solid $gray-200;
+
+  @include mobile {
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+}
+
+.commentCol {
+  @include desktop {
+    margin-top: -0.3rem;
+  }
+}
+
+.comments {
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 1.5rem;;
+  }
+}
+
+.comment {
+  @include desktop {
+    margin-top: -0.8rem;
+  }
+}
+
+.comment :global {
+  .form-group,
+  .row,
+  .col {
+    padding: 0 !important;
+  }
+
+  .row {
+    margin: 0;
+  }
+
+  .input-group {
+    max-width: none;
+  }
+
+  .form-control {
+    font-size: $font-size-base;
+  }
+}
+
+.name {
+  font-weight: $font-weight-bolder;
+}
+
+.delete {
+  color: $gray-600 !important;
+
+  &:hover {
+    color: $primary !important;
+  }
+
+  &:active {
+    background-color: transparent !important;
+  }
+}
+
+.Bold{
+  @include mobile{
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+  }
+}
+.created{
+  @include mobile{
+  color: gray;
+  }
+}

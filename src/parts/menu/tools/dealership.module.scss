@@ -1,0 +1,33 @@
+@import 'css/custom/_required.scss';
+
+.dealerShip {
+  align-items: center !important;
+  display: flex !important;
+  padding: $nav-link-padding-y-mobile $nav-link-padding-x-mobile;
+
+  :global(.form-group) {
+    padding: 0;
+  }
+
+  :global(.form-control),
+  :global(.input-group-append) {
+    font-size: $font-size-lg;
+    height: 2rem;
+  }
+
+  :global(.form-control) {
+    color: $nav-link-active-color;
+  }
+
+  :global(.form-label) {
+    font-size: $font-size-lg !important;
+    letter-spacing: 0 !important;
+    line-height: 2rem !important;
+    padding-top: 0 !important;
+    text-transform: none !important;
+  }
+
+  :global(.dropdown-menu) {
+    //top: -2rem;
+  }
+}

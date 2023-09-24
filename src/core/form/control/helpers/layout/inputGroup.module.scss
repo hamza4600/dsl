@@ -1,0 +1,18 @@
+@import 'css/custom/_required.scss';
+
+.inputGroup {
+  flex-wrap: nowrap;
+
+  &:not(.fullWidth) {
+    max-width: $input-max-width;
+  }
+
+  &:not(.disabled) {
+    &:hover {
+      :global(.form-control),
+      :global(.input-group-text) {
+        @extend %input-hover;
+      }
+    }
+  }
+}

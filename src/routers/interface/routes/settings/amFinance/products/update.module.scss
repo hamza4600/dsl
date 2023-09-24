@@ -1,0 +1,13 @@
+@import 'css/custom/_required.scss';
+
+.paragraph {
+  text-transform: capitalize;
+}
+
+.checklist {
+  justify-content: flex-start;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,25 @@
+@import 'css/custom/_required.scss';
+
+.toggle {
+  @include hover {
+    .lock {
+      color: $primary;
+
+      :global(.fill) {
+        fill: $primary;
+      }
+    }
+  }
+}
+
+.lock {
+  transition: $transition-base;
+}
+
+.locked {
+  color: $dark;
+
+  :global(.fill) {
+    fill: $dark;
+  }
+}

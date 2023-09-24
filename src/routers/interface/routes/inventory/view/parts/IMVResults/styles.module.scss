@@ -1,0 +1,32 @@
+@import 'css/custom/_required.scss';
+
+.table {
+  border: 1px solid $gray-200;
+  border-bottom: none;
+  border-left:none;
+  margin-bottom: 1.5rem;
+
+  &--row {
+    border-bottom: 1px solid $gray-200;
+    display:grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+
+    span {
+      padding: 13px 8px;
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: 400;
+      color: $gray-800;
+    }
+
+    &__head {
+      background-color: rgba($gray-200, 0.5);
+
+      span {
+        font-size: 10px;
+        line-height: 12px;
+        color: $gray-600;
+      }
+    }
+  }
+}

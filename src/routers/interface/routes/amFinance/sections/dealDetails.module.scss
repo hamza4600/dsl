@@ -1,0 +1,22 @@
+@import 'css/custom/_required.scss';
+
+.row {
+  @include mobile {
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+  }
+}
+
+.label {
+  @include desktop {
+    max-width: 32rem;
+  }
+}
+
+.address {
+  line-height: 1.5;
+
+  @include media-breakpoint-down(md) {
+    padding-top: 0;
+  }
+}

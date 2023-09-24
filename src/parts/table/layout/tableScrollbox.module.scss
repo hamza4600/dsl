@@ -1,0 +1,67 @@
+@import 'css/custom/_required.scss';
+
+$shadow-width: 3rem;
+
+@mixin table-shadow {
+  height: 100%;
+  transition: $transition-base;
+  top: 0;
+  width: $shadow-width;
+  z-index: $zindex-sticky;
+}
+
+.container {
+  display: flex;
+  flex-grow: 1;
+}
+
+.outer {
+  @include desktop {
+    @include before {
+      @include table-shadow;
+      @include gradient-x(transparentize($border-color, .65), transparentize($border-color, 1));
+      left: 0;
+    }
+
+    @include after {
+      @include table-shadow;
+      @include gradient-x(transparentize($border-color, 1), transparentize($border-color, .65));
+      right: 0;
+    }
+
+    .start & {
+      @include before {
+        width: 0;
+      }
+    }
+
+    .end & {
+      @include after {
+        width: 0;
+      }
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @include mobile {
+    min-width: inherit !important;
+  }
+}
+
+.empty {
+  width: 100%;
+}
+
+:export {
+  xs: strip-unit($table-cell-xs) * strip-unit($body-size);
+  sm: strip-unit($table-cell-sm) * strip-unit($body-size);
+  md: strip-unit($table-cell-md) * strip-unit($body-size);
+  lg: strip-unit($table-cell-lg) * strip-unit($body-size);
+  xl: strip-unit($table-cell-xl) * strip-unit($body-size);
+
+}

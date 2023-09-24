@@ -1,0 +1,122 @@
+@use "sass:math";
+@import 'css/custom/_required.scss';
+
+$checkbox-size: 1.8rem;
+
+.container {
+  align-items: center;
+  display: flex;
+  height: 100%;
+
+  @include mobile {
+    justify-content: space-between;
+    padding-bottom: 10px ;
+  }
+}
+
+.checkbox {
+  align-items: center;
+  display: flex;
+  padding-left: 0;
+
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+
+.input {
+  cursor: pointer;
+  height: $checkbox-size;
+  margin-left: 0;
+  margin-top: 0;
+  opacity: 0;
+  width: $checkbox-size;
+  z-index: 1;
+
+  &.disabled {
+    cursor: inherit;
+  }
+
+  &[type="radio"] {
+    & ~ .sprite {
+      border-radius: 100%;
+    }
+  }
+
+  &:checked {
+    & ~ .sprite {
+      background-color: $white;
+      color: $primary !important;
+    }
+
+    & ~ .label {
+      color: $dark;
+      font-weight: $font-weight-bolder;
+    }
+  }
+
+  &:not(:checked) {
+    & ~ .sprite {
+      :global(.sprite) {
+        opacity: 0;
+      }
+    }
+
+    &:hover {
+      &:not(:disabled) ~ .sprite {
+        :global(.sprite) {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &:disabled {
+    & ~ .sprite {
+      border-color: $border-color;
+      color: $border-color;
+    }
+
+    & ~ .label {
+      color: $border-color;
+    }
+  }
+}
+
+.sprite {
+  background-color: $input-empty-bg;
+  border: $input-border-width solid $input-border-color;
+  border-radius: math.div($input-border-radius, 2);
+  color: $input-border-color;
+  height: $checkbox-size;
+  width: $checkbox-size;
+
+  :global(.sprite) {
+    transition: opacity $transition-time;
+  }
+
+  :global(.form-control-error) & {
+    border-color: $danger !important;
+  }
+}
+
+.label {
+  color: $secondary;
+  font-size: $font-size-lg;
+  margin-left: 12px;
+  white-space: nowrap;
+}
+
+.formGroup {
+  max-width: 120px;
+  margin-left: 1rem !important;
+  padding: 0 !important;
+}
+
+.formControl {
+  text-align: right;
+}
+
+.controlContainer {
+  margin-left: 2rem;
+}

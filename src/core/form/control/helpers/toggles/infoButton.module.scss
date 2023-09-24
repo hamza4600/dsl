@@ -1,0 +1,36 @@
+@import 'css/custom/_required.scss';
+
+.info {
+  min-width: $btn-font-size * $btn-line-height !important;
+
+  :global(.fill),
+  :global(.stroke) {
+    transition: $transition-base;
+  }
+
+  &:hover {
+    :global(.fill) {
+      fill: $primary !important;
+    }
+
+    :global(.stroke) {
+      stroke: $primary !important;
+    }
+  }
+}
+
+.tooltip {
+  margin-top: $btn-padding-y + $border-width - $tooltip-arrow-height;
+
+  :global(.btn-sm) & {
+    margin-top: $btn-padding-y-sm + $border-width - $tooltip-arrow-height;
+  }
+
+  :global(.btn-lg) & {
+    margin-top: $btn-padding-y-lg + $border-width - $tooltip-arrow-height;
+  }
+}
+
+.list {
+  padding-left: 2rem;
+}

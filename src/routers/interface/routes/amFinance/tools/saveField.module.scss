@@ -1,0 +1,14 @@
+@import 'css/custom/_required.scss';
+
+.status {
+  width: $btn-height;
+}
+
+.btn {
+  min-width: $btn-height;
+
+  &:disabled {
+    border-color: $btn-link-disabled-color;
+    color: $btn-link-disabled-color;
+  }
+}

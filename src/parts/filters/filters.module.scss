@@ -1,0 +1,35 @@
+@use 'sass:math';
+@import 'css/custom/_required.scss';
+
+.form {
+  @include media-breakpoint-up($mobile-breakpoint-up) {
+    margin-bottom: math.div($form-group-margin-bottom, 2);
+  }
+
+  @include mobile {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  & > :global(.row) {
+    margin-bottom: math.div(-$form-group-margin-bottom, 4);
+    margin-top: math.div(-$form-group-margin-bottom, 4);
+
+    & > * {
+      padding-bottom: math.div($form-group-margin-bottom, 4);
+      padding-top: math.div($form-group-margin-bottom, 4);
+    }
+  }
+
+}
+
+.sidebar {
+  margin: 0;
+}
+
+.spacer {
+  flex-grow: 1;
+
+  @include hidden-mobile;
+}

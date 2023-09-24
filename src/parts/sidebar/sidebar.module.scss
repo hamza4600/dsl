@@ -1,0 +1,44 @@
+@import 'css/custom/_required.scss';
+
+.sidebar {
+  background: $sidebar-bg;
+  height: 100vh;
+  max-height: 100vh;
+  margin: 0 !important;
+  max-width: $input-max-width + $label-width + $form-grid-gutter-width + $sidebar-padding-x * 2 + $border-width;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: $transition-base;
+  z-index: $header-zindex + 1;
+
+  @include mobile {
+    width: 100vw;
+
+    &[data-show="false"] {
+      right: -100vw;
+    }
+  }
+
+  @include desktop {
+    border-left: $border-width solid $border-color;
+    width: $sidebar-width;
+
+    &[data-show="false"] {
+      right: -$sidebar-width;
+    }
+  }
+}
+
+.outer {
+  max-height: calc(100vh - #{$header-height});
+  min-height: calc(100vh - #{$header-height});
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: $sidebar-padding-y $sidebar-padding-x;
+}

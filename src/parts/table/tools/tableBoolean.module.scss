@@ -1,0 +1,15 @@
+@import 'css/custom/_required.scss';
+
+.tableCell {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.container {
+  width: 64px !important;
+
+  @include media-breakpoint-down(md) {
+    width: 100% !important;
+  }
+}

@@ -1,0 +1,8 @@
+@import 'css/custom/_required.scss';
+
+.value {
+  width: fit-content;
+  @include mobile {
+    margin: -0.8rem 0 0.8rem 0;
+  }
+}

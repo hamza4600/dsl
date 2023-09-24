@@ -1,0 +1,51 @@
+@import 'css/custom/_required.scss';
+
+.toggle {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+
+  &--control {
+    transition: $transition-base;
+    transition-duration: .5s;
+    width: 4rem;
+    height: 2rem;
+    display: block;
+    border-radius: 2rem;
+    background-color: $gray-200;
+    position: relative;
+
+    &:after {
+      border: 2px solid $gray-200;
+      transition: $transition-fade;
+      content: "";
+      width: 2rem;
+      height: 2rem;
+      display: block;
+      background-color: $primary;
+      opacity: 0.1;
+      border-radius: 50%;
+      position: absolute;
+    }
+  }
+
+  &--input {
+    display: none;
+
+    &:checked+.toggle--control:after {
+      left: 2rem;
+      opacity: .75;
+    }
+  }
+
+}
+
+.label {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: rgb(107, 116, 146);
+  margin-left: 12px;
+}

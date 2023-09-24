@@ -1,0 +1,15 @@
+@import 'css/custom/_required.scss';
+
+.toggle {
+  background-color: transparent !important;
+  border-color: $border-color !important;
+  border-right: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  color: $border-color !important;
+  margin: 2.4rem 0;
+
+  &:hover {
+    color: $component-active-color !important;
+  }
+}

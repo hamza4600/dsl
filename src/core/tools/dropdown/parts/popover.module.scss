@@ -1,0 +1,20 @@
+@import 'css/custom/_required.scss';
+
+.popover {
+  opacity: 0;
+  pointer-events: none !important; // fix for dropdown
+  position: absolute;
+  transition: opacity $transition-time; // fix for dropdown
+  z-index: $zindex-popover;
+
+  &.show {
+    opacity: 1 !important; // fix for dropdown
+    pointer-events: auto !important; // fix for dropdown
+  }
+
+  &.fullWidth {
+    &, & > * {
+      min-width: 100%;
+    }
+  }
+}

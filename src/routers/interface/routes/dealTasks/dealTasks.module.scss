@@ -1,0 +1,11 @@
+@import 'css/custom/_required.scss';
+
+.center {
+  @include desktop {
+    justify-content: center;
+  }
+}
+
+.tasks {
+  cursor: pointer;
+}

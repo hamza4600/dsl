@@ -1,0 +1,33 @@
+@import 'css/custom/_required.scss';
+
+.inputGroup{
+    @include mobile {
+        width: 100%;
+      }
+      @include desktop {
+        width: 90%;
+        margin-top: 13px !important;
+      }
+    border:1px solid $nav-link-sprite;
+    border-radius: 4px;
+    }
+.inputText{
+    color: #6B7492;
+    border: none ;
+    height: 27px ;
+    background-color: rgba(201, 203, 212, 0.1);
+}
+.mainInput{
+    color: #6B7492;
+    border: none;
+    background-color: rgba(201, 203, 212, 0.1);
+    padding: 0px;
+    height: 27px
+}
+.value {
+    margin-top: 0.3rem;
+  
+    @include mobile {
+      margin: -0.8rem 0 0.8rem 0;
+    }
+  }

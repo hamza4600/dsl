@@ -1,0 +1,98 @@
+@import 'css/custom/_required.scss';
+
+.header {
+  align-items: center;
+  min-height: $header-height;
+  padding: 0 $header-padding;
+  @include media-breakpoint-down(sm) {
+    padding: 0 $header-padding;
+
+  }
+  position: fixed;
+  top: 0;
+  white-space: nowrap;
+  width: 100%;
+  z-index: $header-zindex;
+
+  * {
+    flex-wrap: nowrap;
+    // white-space: nowrap;
+  }
+}
+.searchHeader{
+  display: flex;
+
+}
+.header_search{
+  width: 30% !important;
+}
+.divider {
+  background-color: $dark-border-color;
+  height: $header-height;
+  min-width: 1px;
+}
+
+.tools {
+  align-items: center;
+  display: flex;
+  flex-basis: 0;
+  height: 100%;
+  margin-left: auto;
+  margin-right: -$header-padding
+}
+
+.dark {
+  background-color: $dark-bg;
+  color: $dark-color;
+
+  :global(.form-control),
+  :global(.input-group-prepend .input-group-text),
+  :global(.input-group-append .input-group-text),
+  :global(.form-check-sprite) {
+    background-color: transparent !important;
+    border-color: $dark-input-border-color !important;
+    color: $dark-input-color !important;
+
+    &::placeholder {
+      color: $dark-placeholder-color !important;
+    }
+
+    svg {
+      color: $dark-placeholder-color !important;
+    }
+  }
+
+  :global(.form-control-focus) {
+    :global(.input-group-prepend .input-group-text),
+    :global(.input-group-append .input-group-text) {
+      svg {
+        color: $dark-input-color !important;
+      }
+    }
+  }
+
+  :global(.form-label) {
+    color: $dark-muted !important;
+  }
+
+  :global(.text-muted) {
+    color: $dark-muted !important;
+  }
+}
+ .dealerShip{
+  @include hover {
+    background-color: transparentize($dark, .8) !important;
+    box-shadow: none !important;
+  }
+ }
+
+ .menuToogle{
+  @include before {
+    background-color: $accent;
+  }
+  @include hover {
+    background-color: transparentize($dark, .8) !important;
+    box-shadow: none !important;
+
+  }
+ }

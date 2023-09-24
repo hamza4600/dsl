@@ -1,0 +1,6 @@
+@each $color, $value in $theme-colors {
+  .badge-#{$color} {
+    background-color: mix($white, $value, 90%);
+    color: $value;
+  }
+}

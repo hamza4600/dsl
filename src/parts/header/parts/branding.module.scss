@@ -1,0 +1,84 @@
+@use 'sass:math';
+@import 'css/custom/_required.scss';
+
+.branding {
+  align-items: center;
+  color: $white !important;
+  display: flex;
+  height: $header-height;
+  overflow: hidden;
+  position: relative;
+  transition: $transition-base;
+
+  @include desktop {
+    border-right: $border-width solid $dark-border-color;
+    min-width: $sidebar-width - $header-padding;
+
+    &.collapse {
+      margin-left: -$header-padding;
+      min-width: $sidebar-collapse-width;
+    }
+  }
+}
+
+.logo {
+  use {
+    transform: scale(math.div(32px,$logo-height));
+  }
+
+  @include mobile {
+    left: -#{calc(83/8)}px;
+    position: relative;
+    transform: scale(.75);
+  }
+}
+
+.title {
+  font-size: $font-size-base;
+  font-weight: $font-weight-bold;
+  letter-spacing: .1rem;
+  line-height: 1.25;
+  margin-left: 1.2rem;
+  text-transform: uppercase;
+  white-space: normal !important;
+  width: 8rem;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.initial, .full {
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  transition: $transition-base;
+
+  .collapse & {
+    left: math.div($sidebar-collapse-width - 3.2rem, 2);
+  }
+}
+
+.initial {
+  left: 0;
+
+  .collapse & {
+    opacity: 1;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.full {
+  display: flex;
+
+  .branding:not(.collapse) & {
+    opacity: 1;
+  }
+
+  @include mobile {
+    position: inherit;
+  }
+}

@@ -1,0 +1,13 @@
+@import 'css/custom/_required.scss';
+
+.toggle {
+  background-color: transparentize($dark, .8) !important;
+
+  &:global(.active) {
+    background-color: $accent !important;
+
+    @include before {
+      display: none;
+    }
+  }
+}

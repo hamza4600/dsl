@@ -1,0 +1,30 @@
+@import 'css/custom/_required.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &--body {
+    border-bottom: 1px solid $gray-200;
+  }
+
+  &--footer {
+    margin-bottom: 1.5rem
+  }
+
+  &--row {
+    margin: .75rem 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 0.25rem;
+  }
+}
+
+.text {
+
+  &--label {
+    color: $gray-600;
+  }
+}

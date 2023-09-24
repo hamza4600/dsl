@@ -1,0 +1,15 @@
+@import 'css/custom/_required.scss';
+
+.wrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.feedback {
+  color: $danger !important;
+  display: block;
+  font-size: $font-size-base;
+  // margin-left: $input-padding-x + $border-width;
+  margin-top: 1rem;
+}

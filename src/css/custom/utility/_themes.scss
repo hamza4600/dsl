@@ -1,0 +1,35 @@
+.theme-dark {
+  background-color: $dark-bg;
+  color: $dark-color;
+
+
+  // Components
+
+  hr {
+    border-color: $dark-border-color;
+  }
+
+
+  // Forms
+
+  .form-control,
+  .input-group-text,
+  .form-check-sprite {
+    background-color: $dark-input-bg !important;
+    border-color: $dark-input-border-color !important;
+    color: $dark-input-color !important;
+
+    @mixin autofill {
+      background-color: $red !important;
+      border-color: $dark-input-border-color !important;
+    }
+  }
+
+  .form-label {
+    color: $dark-muted !important;
+  }
+
+  .text-muted {
+    color: $dark-muted !important;
+  }
+}

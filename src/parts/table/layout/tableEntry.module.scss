@@ -1,0 +1,36 @@
+@import 'css/custom/_required.scss';
+
+.entry {
+  transition: $transition-base;
+
+  &:hover {
+    box-shadow: $box-shadow;
+    z-index: $zindex-dropdown - 1;
+  }
+
+  @include mobile {
+    background: $white;
+    border: $border-width solid $border-color;
+    margin-bottom: 1.6rem;
+  }
+
+  @include desktop {
+    background: $white;
+
+    &:not(:last-child) {
+      border-bottom: $border-width solid $border-color;
+    }
+
+    &:nth-child(2n - 1) {
+      background: $gray-000;
+    }
+  }
+}
+
+.row {
+  margin: 0;
+
+  @include mobile {
+    margin: -$border-width;
+  }
+}

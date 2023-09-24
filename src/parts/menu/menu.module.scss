@@ -1,0 +1,84 @@
+@import 'css/custom/_required.scss';
+@import './layout/menuItem.module.scss';
+
+.menu {
+  background: $white;
+  position: fixed;
+  transition: $transition-base;
+  z-index: $zindex-fixed + 1;
+}
+
+.mobile {
+  min-width: 100vw;
+  top: 0;
+  z-index: $header-zindex + 1;
+
+  .scrollboxOuter {
+    max-height: 100vh;
+    min-height: 100vh;
+  }
+
+  .header {
+    :global(.btn) {
+      border: 0;
+      border-radius: 0;
+      padding: 0 $nav-link-padding-x-mobile;
+    }
+
+    @include after {
+      border-top: $border-width solid $border-color;
+      margin: 0 0 $nav-link-padding-y-mobile $nav-link-padding-x-mobile;
+      position: relative;
+      width: calc(100vw - #{$nav-link-padding-x-mobile});      
+    }
+  }
+
+  .footer {
+    @include before {
+      border-top: $border-width solid $border-color;
+      margin: $nav-link-padding-y-mobile 0 $nav-link-padding-y-mobile $nav-link-padding-x-mobile;
+      position: relative;
+      width: calc(100vw - #{$nav-link-padding-x-mobile});      
+    }
+
+    :global(.btn) {
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      padding: $nav-link-padding-y-mobile * 2 $nav-link-padding-x-mobile;
+    }
+  }
+}
+
+.desktop {
+  border-right: $border-width solid $border-color;
+  left: 0;
+  max-width: $sidebar-width;
+  min-width: $sidebar-width;
+
+  .scrollboxOuter {
+    max-height: calc(100vh - #{$header-height});
+    min-height: calc(100vh - #{$header-height});
+  }
+
+  .footer {
+    display: flex;
+    justify-content: flex-end;
+    transition: $transition-base;
+    width: $sidebar-width;
+  }
+  
+  &.collapse {
+    max-width: $sidebar-collapse-width;
+    min-width: $sidebar-collapse-width;
+
+    .footer {
+      width: $sidebar-collapse-width;
+    }
+  }
+}
+
+.scrollboxTray {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,13 @@
+@import 'css/custom/_required.scss';
+
+.item {}
+
+.link {}
+
+.label {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-base;
+  letter-spacing: normal;
+  line-height: 2rem;
+  text-transform: none;
+}

@@ -1,0 +1,19 @@
+@import 'css/custom/_required.scss';
+
+.alert {
+  align-items: center;
+  display: flex;
+  font-size: $alert-font-size;
+  justify-content: center;
+  line-height: $alert-line-height;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  & > * {
+    &:not(:last-child) {
+      margin-right: .8rem;
+    }
+  }
+}

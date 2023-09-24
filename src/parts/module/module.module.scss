@@ -1,0 +1,43 @@
+@use 'sass:math';
+@import 'css/custom/_required.scss';
+
+.module {
+  background: $white;
+  border: $border-width solid transparentize($light, .6);
+  padding: 2rem;
+
+  @include before {
+    border-color: $gray-300 transparent transparent $gray-300;
+    border-style: solid;
+    border-width: 8px;
+    left: 0;
+    top: 0;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  @include desktop {
+    padding: 30px;
+  }
+}
+
+.header {
+  color: $primary;
+  font-weight: $font-weight-normal;
+  margin: 0 0 math.div($form-grid-gutter-width,2);
+
+  @include mobile {
+    padding: math.div($form-grid-gutter-width-mobile,2) 0;
+  }
+}
+
+.divider {
+  background: $border-color;
+  border-width: 0;
+  height: 1px;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  width: 100%;
+}

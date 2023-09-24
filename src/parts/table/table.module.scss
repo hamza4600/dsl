@@ -1,0 +1,12 @@
+@import 'css/custom/_required.scss';
+
+.table {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  @include desktop {
+    border: $border-width solid $border-color;
+    min-height: $table-row-height * ($table-min-rows + 1) + $border-width;
+  }
+}

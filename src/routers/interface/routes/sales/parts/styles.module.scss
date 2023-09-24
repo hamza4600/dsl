@@ -1,0 +1,50 @@
+@import 'css/custom/_required.scss';
+
+.col{
+  justify-content: center; 
+  align-items: center;
+  flex: 1px;
+}
+.header {
+  background-color: $gray-000;
+  border-bottom: $border-width solid $border-color;
+  color: $secondary;
+  flex-grow: 0;
+  font-size: $font-size-xs;
+  line-height: 1.4;
+  position: sticky;
+  top: 0;
+  border: 1px solid #EBECF0;
+  border-radius: 0px;
+  z-index: $zindex-sticky;
+
+  & > :global(.table-row) {
+    margin: 0;
+  }
+  .cell {
+    align-items: flex-start;
+    display: flex;
+    word-break: normal;
+    line-height: $line-height-base;
+    padding: $table-cell-padding-y 5px;
+    user-select: none;
+    width: 100%;
+  }
+  @include hidden-mobile;
+}
+
+.entry {
+  // transition: $transition-base;
+
+  @include desktop {
+    background: $gray-000;
+
+    &:not(:last-child) {
+      border-bottom: $border-width solid $border-color;
+    }
+
+    &:nth-child(2n - 1) {
+      background: $white;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+@import 'css/custom/_required.scss';
+
+.container:not(:first-child) {
+  margin: 20px 0;
+  
+  @include mobile{
+    border:2px solid #80808033;
+    margin-top:10px;
+  }
+}
+
+.dateHeading{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 11px;
+line-height: 26px;
+
+@include desktop{
+  font-size: 18px;
+  line-height: 22px;
+  margin: 10px 0;
+}
+/* identical to box height, or 145% */
+
+display: flex;
+align-items: center;
+letter-spacing: 1px;
+text-transform: uppercase;
+/* Primary */
+color: $primary;
+}
+
+.tableContent {
+  min-height: inherit;
+}
+
+
+
+
+.label{
+  color:gray 
+}
+.tableRow{
+  margin: 0 10px;
+  border-bottom: 2px solid #80808033;
+  line-height:40px;
+
+}
+.tableRow:last-child{
+  border: none;
+}
+.cell{
+  display: flex !important;
+  color: $dark;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 14px;
+  align-items: center;
+}
+.message {
+  color: $text-muted;
+  font-style: italic;
+  text-align: center;
+  padding: 2rem;
+}
+.empty {
+  align-items: center;
+  justify-content: center;
+}
+.divider {
+  background-color: $dark-border-color;
+  height: 20px;
+  min-width: 1px;
+  display: inline-block;
+  margin: 0px 5px;
+}
+.had{
+  color: $text-muted;
+}
+
+.hadVal{
+  font-weight: 500;
+  font-size: 15px;
+  color: $primary;
+}
